@@ -16,10 +16,10 @@ menu:
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  分类 ||fas fa-list:
+  文档 ||fas fa-list:
     归档: /archives || fas fa-archive
     标签: /tags || fas fa-tags
-    # 分类: /category || fas fa-home
+    分类: /category || fas fa-floder
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
