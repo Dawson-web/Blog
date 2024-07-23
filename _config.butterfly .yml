@@ -614,7 +614,7 @@ theme_color:
   enable: true
   main: "#49B1F5"
   paginator: "#00c4b6"
-  button_hover: "#FF7242"
+  button_hover: "#2563eb"
   text_selection: "#00c4b6"
   link_color: "#99a9bf"
   meta_color: "#858585"
@@ -624,7 +624,7 @@ theme_color:
   toc_color: "#00c4b6"
   blockquote_padding_color: "#49b1f5"
   blockquote_background_color: "#49b1f5"
-  scrollbar_color: "#49b1f5"
+  scrollbar_color: "#a1a1aa"
   meta_theme_color_light: "ffffff"
   meta_theme_color_dark: "#0d0d0d"
 
@@ -647,7 +647,7 @@ text_align_justify: false
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: "#f4f4f5"
 
 # Footer Background
 footer_bg: true
@@ -737,8 +737,8 @@ beautify:
 font:
   global-font-size:
   code-font-size:
-  font-family:
-  code-font-family:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
