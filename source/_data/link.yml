@@ -1,0 +1,22 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: bakptr
+      link: https://pooi.me/
+      avatar: https://q.qlogo.cn/g?b=qq&nk=369060891&s=160
+      descr: 社恐但无所不知的bakaptr
+    - name: 未晓,
+      avatar: https://q.qlogo.cn/g?b=qq&nk=1537476031&s=160
+      link: https://www.dawnot.online/
+      descr: 一只正在学习前端的未晓
+    - name: For You,
+      avatar: http://qn.lackofcsy.cn/config/055c0cb176b1f4c0cdb91e277a8eeb05.jpg
+      link: https://www.dawnot.online/
+      descr: 螃蟹在剥我的壳, 笔记本在写我,  漫天的我落在枫叶上雪花上, 而你在想我。
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: CUIT指南
+      link: https://guide.cuit.dev/
+      avatar: /images/school.png
+      descr: 入学指南
