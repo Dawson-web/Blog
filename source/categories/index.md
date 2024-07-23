@@ -1,7 +1,7 @@
 ---
-title: tags
+title: categories
 date: 2024-07-23 18:47:11
-type: "tags"
+type: "categories"
 orderby: random
 comments: false
 description:
