@@ -1,0 +1,83 @@
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
+index f9c1bae..790070d 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
+@@ -114,6 +114,7 @@
+         overflow: hidden
+         width: w = 4.2em
+         height: w
++        border-radius: 4px
+ 
+         :first-child
+           @extend .imgHover
+@@ -164,8 +165,7 @@
+ 
+       &:hover
+         padding: 3px 17px
+-        background-color: var(--text-bg-hover)
+-
++        color:#2563eb
+       span
+         @extend .limit-one-line
+ 
+@@ -329,7 +329,7 @@
+     object-fit: cover
+ 
+     &:hover
+-      transform: rotate(360deg)
++      transform:scale(1.2)
+ 
+ .site-data
+   display: table
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
+index 97cb0ff..e613a5a 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
+@@ -272,6 +272,7 @@
+   &.show
+     opacity: 1
+   
++
+   #blog-info
+     flex: 1
+     color: var(--light-grey)
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl b/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
+index 57dd50a..7fa32c2 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
+@@ -17,6 +17,8 @@
+         border-radius: 8px
+         line-height: 17px
+         -webkit-transform: translateZ(0)
++        background: #f3f4f6
++
+ 
+         +maxWidth1024()
+           width: calc(50% - 15px) !important
+@@ -36,7 +38,6 @@
+           bottom: 0
+           left: 0
+           z-index: -1
+-          background: var(--text-bg-hover)
+           content: ''
+           transition: transform .3s ease-out
+           transform: scale(0)
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl b/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
+index bce33ae..39268c5 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
+@@ -4,10 +4,13 @@
+       display: inline-block
+       padding: 0 8px
+       transition: all .3s
++      background: rgba(226, 232, 240, 1)
++      border-radius: 4px
+ 
+       &:hover
+         color: $text-hover !important
+-        transform: scale(1.1)
++        background: rgba(226, 232, 240, 0.8)
++        transform: scale(1.2)
+ 
+       +maxWidth768()
+         zoom: .85
