@@ -29,8 +29,20 @@ index f9c1bae..790070d 100644
  
  .site-data
    display: table
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl
+index f2feebd..82f4f94 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl
+@@ -61,7 +61,6 @@
+   .comment-wrap
+     > div
+       animation: tabshow .5s
+-
+       &:nth-child(2)
+         display: none
+ 
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
-index 97cb0ff..e613a5a 100644
+index 97cb0ff..0fe9682 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 @@ -272,6 +272,7 @@
@@ -41,6 +53,28 @@ index 97cb0ff..e613a5a 100644
    #blog-info
      flex: 1
      color: var(--light-grey)
+@@ -343,7 +344,7 @@
+           list-style: none
+ 
+           &:hover
+-            background: var(--text-bg-hover)
++            background: #e5e7eb
+ 
+           &:first-child
+             border-top-left-radius: 5px
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
+index d960fff..7df228f 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
+@@ -45,7 +45,7 @@
+         border-radius: 6px
+ 
+         &:hover
+-          background: var(--text-bg-hover)
++          background: #e5e7eb
+ 
+         i:first-child
+           width: 15%
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl b/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
 index 57dd50a..7fa32c2 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
@@ -63,21 +97,24 @@ index 57dd50a..7fa32c2 100644
            transition: transform .3s ease-out
            transform: scale(0)
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl b/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
-index bce33ae..39268c5 100644
+index bce33ae..d887886 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_page/tags.styl
-@@ -4,10 +4,13 @@
+@@ -1,12 +1,17 @@
+ .tag-cloud
++ 
+   &-list
+     a
        display: inline-block
        padding: 0 8px
        transition: all .3s
 +      background: rgba(226, 232, 240, 1)
 +      border-radius: 4px
++      margin: 0 5px 5px 0
  
        &:hover
          color: $text-hover !important
--        transform: scale(1.1)
 +        background: rgba(226, 232, 240, 0.8)
-+        transform: scale(1.2)
+         transform: scale(1.1)
  
        +maxWidth768()
-         zoom: .85
