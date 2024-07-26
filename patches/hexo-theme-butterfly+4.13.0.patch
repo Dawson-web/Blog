@@ -1,5 +1,5 @@
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/head.pug b/node_modules/hexo-theme-butterfly/layout/includes/head.pug
-index 0038afc..73093af 100644
+index 0038afc..bca6453 100644
 --- a/node_modules/hexo-theme-butterfly/layout/includes/head.pug
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/head.pug
 @@ -21,6 +21,8 @@ meta(name="author" content=pageAuthor)
@@ -7,7 +7,7 @@ index 0038afc..73093af 100644
  meta(name ="format-detection" content="telephone=no")
  meta(name="theme-color" content=themeColor)
 +meta(name="baidu-site-verification" content="codeva-6t17LBl2wH")
-+
++meta(name="msvalidate.01" content="FD366C80A87EF394BE16AB03CBCC2656")
  
  //- Open_Graph
  include ./head/Open_Graph.pug
