@@ -1,3 +1,16 @@
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/head.pug b/node_modules/hexo-theme-butterfly/layout/includes/head.pug
+index 0038afc..73093af 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/head.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/head.pug
+@@ -21,6 +21,8 @@ meta(name="author" content=pageAuthor)
+ meta(name="copyright" content=pageCopyright)
+ meta(name ="format-detection" content="telephone=no")
+ meta(name="theme-color" content=themeColor)
++meta(name="baidu-site-verification" content="codeva-6t17LBl2wH")
++
+ 
+ //- Open_Graph
+ include ./head/Open_Graph.pug
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 index f9c1bae..790070d 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
