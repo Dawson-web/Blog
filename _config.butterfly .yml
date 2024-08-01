@@ -59,10 +59,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: /images/bg.png
+index_img: /images/bg1.png
 
 #默認的 top_img，當頁面的 top_img 沒有配置時，會顯示 default_top_img
-default_top_img: /images/bg.png
+default_top_img: /images/bg1.png
 
 # The banner image of archive page
 archive_img:
