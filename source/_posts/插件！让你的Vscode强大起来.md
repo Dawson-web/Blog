@@ -1,8 +1,7 @@
 ---
-title: 插件！让你的Vscode强大起来
-tags:  
-- 分享
-categories: 前端
+title: 插件！让你的Vscode强大起来 —— 人生总不能一直是一片荒野
+tags: 前端分享  
+categories: 前端分享
 cover: /images/插件！让你的Vscode强大起来/cover.png
 ---
 
