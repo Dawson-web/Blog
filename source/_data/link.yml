@@ -26,3 +26,7 @@
     - name: 开发者武器库
       link: https://devtool.tech/
       descr: 开发者工具大全
+    - name: JSRUN.NET
+      link: https://jsrun.net/
+      descr: 创始于2016年,专业的代码在线运行
+      avatar: https://cdns.jsrun.net/avatar/default.png
