@@ -26,7 +26,11 @@ date: 2024-08-15 09:00:00
 
 - 默认绑定
 
-  this的指向默认情况下是window全局对象
+  在非严格模式下（non-strict mode），this的值会是全局对象。
+  
+  在浏览器环境中，全局对象是window。而在Node.js环境中，全局对象是global。
+  
+  如果你是在严格模式（strict mode）下运行这段代码，那么this将会是undefined。
 
   ```js
   console.log(this) // > [object Window]
