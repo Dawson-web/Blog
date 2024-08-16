@@ -58,10 +58,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: /images/bg1.png
+index_img: /images/image.png
 
 #默認的 top_img，當頁面的 top_img 沒有配置時，會顯示 default_top_img
-default_top_img: /images/bg1.png
+default_top_img: /images/image.png
 
 # The banner image of archive page
 archive_img:
@@ -635,7 +635,7 @@ theme_color:
 # The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height:
+index_top_img_height: 0px
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
@@ -756,12 +756,12 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect (打字效果)
-  effect: true
+  effect: false
   # Customize typed.js (配置typed.js)
   # https://github.com/mattboldt/typed.js/#customization
-  loop: true
+  loop: false
   typed_option:
   # source 調用第三方服務
   # source: false 關閉調用
@@ -924,10 +924,11 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/home_top.css?1">
+    - <link rel="stylesheet" href="/css/color.css?1">
 
   bottom:
-    # - <script src="xxxx"></script>
+    - <script src="/js/home_top.js?1"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

@@ -1,3 +1,30 @@
+diff --git a/node_modules/hexo-theme-butterfly/layout/category.pug b/node_modules/hexo-theme-butterfly/layout/category.pug
+index 234a0af..9293622 100644
+--- a/node_modules/hexo-theme-butterfly/layout/category.pug
++++ b/node_modules/hexo-theme-butterfly/layout/category.pug
+@@ -9,6 +9,10 @@ block content
+   else
+     include ./includes/mixins/article-sort.pug
+     #category
++      .category-in-bar
++        .category-in-bar-tips
++          i.fa-fw.fas.fa-folder-open
++        include includes/categoryBar.pug
+       .article-sort-title= _p('page.category') + ' - ' + page.category
+       +articleSort(page.posts)
+       include includes/pagination.pug
+\ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/categoryBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/categoryBar.pug
+new file mode 100644
+index 0000000..d9ef394
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/categoryBar.pug
+@@ -0,0 +1,4 @@
++#category-bar
++  .category-bar-items#category-bar-items
++    !=getarray_bar("category")
++  a.category-bar-more(href="/categories/") 更多
+\ No newline at end of file
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/head.pug b/node_modules/hexo-theme-butterfly/layout/includes/head.pug
 index 0038afc..bca6453 100644
 --- a/node_modules/hexo-theme-butterfly/layout/includes/head.pug
@@ -11,6 +38,95 @@ index 0038afc..bca6453 100644
  
  //- Open_Graph
  include ./head/Open_Graph.pug
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
+new file mode 100644
+index 0000000..665de98
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
+@@ -0,0 +1,70 @@
++if is_home()
++    #home_top
++        .recent-top-post-group#recent-top-post-group
++            .recent-post-top#recent-post-top
++                #bannerGroup
++                    #banners
++                        .banners-title
++                            .banners-title-big 无限活力
++                            .banners-title-big 与热爱生活
++                            .banners-title-small BYWIND.XYZ
++                        .tags-group-all
++                            .tags-group-wrapper
++                                each i in site.data.creativity
++                                    - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
++                                    - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
++                                    each item, index in i.creativity_list
++                                        if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
++                                            .tags-group-icon-pair
++                                                .tags-group-icon(style=`background: ${evenNum[index].color}`)
++                                                    img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
++                                                .tags-group-icon(style=`background: ${oddNum[index].color}`)
++                                                    img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
++                                each i in site.data.creativity
++                                    - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
++                                    - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
++                                    each item, index in i.creativity_list
++                                        if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
++                                            .tags-group-icon-pair
++                                                .tags-group-icon(style=`background: ${evenNum[index].color}`)
++                                                    img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
++                                                .tags-group-icon(style=`background: ${oddNum[index].color}`)
++                                                    img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
++                        a#banner-hover(onclick='toRandomPost()')
++                            span.bannerText 随便逛逛
++                            i.fas.fa-arrow-right.banner-righticon
++                    .categoryGroup
++                        .categoryItem(style='box-shadow:var(--bywind-shadow-blue)')
++                            a.categoryButton.CB1.bikan(href='/categories/学习笔记/')
++                                span.categoryButtonText 必看精选
++                                i.fas.fa-dove
++                        .categoryItem(style='box-shadow:var(--bywind-shadow-red)')
++                            a.categoryButton.remen(href='/categories/Hexo魔改/')
++                                span.categoryButtonText 热门文章
++                                i.fas.fa-burn
++                        .categoryItem(style='box-shadow:var(--bywind-shadow-green)')
++                            a.categoryButton.shiyong(href='/categories/后端/')
++                                span.categoryButtonText 实用教程
++                                i.fas.fa-book
++                .topGroup
++                    if site.data.slider
++                        each i in site.data.slider
++                            .recent-post-item
++                                .post_cover.left_radius
++                                    a(href=url_for(i.link), title=i.title)
++                                        span.recent-post-top-text(onclick=`pjax.loadUrl("`+i.link+`")`) 荐
++                                        img.post_bg.entered.loaded(src=url_for(i.cover) onerror="this.onerror=null,this.src='/img/404.png'")
++                                .recent-post-info(onclick=`pjax.loadUrl("`+i.link+`")`)
++                                    a.article-title(href=url_for(i.link), title=i.title)= i.title
++                    .todayCard#todayCard(onclick='pjax.loadUrl(/about/)', style='z-index: 1;')
++                        .todayCard-info
++                            .todayCard-tips 最佳记忆
++                            .todayCard-title
++                                | 山河远阔，人间烟火
++                                br
++                                | 无一是你，无一不是你
++                        .todayCard-cover
++                        .banner-button-group
++                            a.banner-button(onclick='window.event.cancelBubble=!0,bywind.hideTodayCard()')
++                                i.hnfont.icon-add-circle-fill
++                                span.banner-button-text 更多推荐
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/layout.pug b/node_modules/hexo-theme-butterfly/layout/includes/layout.pug
+index dde47c5..3428b11 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/layout.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/layout.pug
+@@ -19,7 +19,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
+     if page.type !== '404'
+       #body-wrap(class=pageType)
+         include ./header/index.pug
+-
++        include ./hometop.pug
+         main#content-inner.layout(class=hideAside)
+           if body
+             div!= body
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/loading/fullpage-loading.pug b/node_modules/hexo-theme-butterfly/layout/includes/loading/fullpage-loading.pug
 index 4a2c8bf..683bd80 100644
 --- a/node_modules/hexo-theme-butterfly/layout/includes/loading/fullpage-loading.pug
@@ -121,6 +237,84 @@ index 663fe50..95d40d0 100644
 +  include ./fullpage-loading.pug
    include ./pace.pug
 \ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug
+new file mode 100644
+index 0000000..e6a0eac
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug
+@@ -0,0 +1,4 @@
++#category-bar
++  .category-bar-items#category-bar-items
++    !=getarray_bar("tag")
++  a.category-bar-more(href="/tags/") 更多
+\ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/tag.pug b/node_modules/hexo-theme-butterfly/layout/tag.pug
+index 9f99658..bb7479e 100644
+--- a/node_modules/hexo-theme-butterfly/layout/tag.pug
++++ b/node_modules/hexo-theme-butterfly/layout/tag.pug
+@@ -9,6 +9,10 @@ block content
+   else
+     include ./includes/mixins/article-sort.pug
+     #tag
++      .category-in-bar
++        .category-in-bar-tips
++          i.fa-fw.fas.fa-tags
++        include includes/tagBar.pug
+       .article-sort-title= _p('page.tag') + ' - ' + page.tag
+       +articleSort(page.posts)
+       include includes/pagination.pug
+\ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/scripts/helpers/get_arrays.js b/node_modules/hexo-theme-butterfly/scripts/helpers/get_arrays.js
+new file mode 100644
+index 0000000..6f7fb68
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/scripts/helpers/get_arrays.js
+@@ -0,0 +1,45 @@
++hexo.extend.helper.register('getarray_bar', function (types) {
++  if (!types) {
++    types = "category"
++  }
++  const categoriesBar = function (categories) {
++    if (!categories || !categories.length) return ``
++    const categoryArr = []
++    hexo.locals.get('categories').map(function (category) {
++      categoryArr.push({ name: category.name, value: category.length })
++    })
++    categoryArr.sort((a, b) => { return b.value - a.value })
++    let strCategoriesBar = ``
++    for (let i = 0; i < categories.length; i++) {
++      strTemp=`
++      <div class="category-bar-item" id="${categoryArr[i].name}">
++      <a href="/categories/${categoryArr[i].name}/">${categoryArr[i].name}</a>
++      </div>`
++      strCategoriesBar+=strTemp
++    }
++    return strCategoriesBar
++  }
++  const tagsBar = function(tags) {
++    if (!tags || !tags.length) return ``
++    const tagArr = []
++    hexo.locals.get('tags').map(function (tag) {
++      tagArr.push({ name: tag.name, value: tag.length })
++    })
++    tagArr.sort((a, b) => { return b.value - a.value })
++    let strTagsBar = ``
++    for (let i = 0; i < tags.length; i++) {
++      strTemp=`
++      <div class="category-bar-item" id="${tagArr[i].name}">
++      <a href="/tags/${tagArr[i].name}/">${tagArr[i].name}</a>
++      </div>`
++      strTagsBar+=strTemp
++    }
++    return strTagsBar
++  }
++  if (types == "category"){
++    return categoriesBar(this.site.categories)
++  }
++  if (types == "tag"){
++    return tagsBar(this.site.tags)
++  }
++})
 diff --git a/node_modules/hexo-theme-butterfly/scripts/tag/link.js b/node_modules/hexo-theme-butterfly/scripts/tag/link.js
 new file mode 100644
 index 0000000..b93c7bb
@@ -150,7 +344,7 @@ index 0000000..b93c7bb
 +
 +hexo.extend.tag.register('link', link, { ends: false })
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
-index f9c1bae..790070d 100644
+index f9c1bae..2cbf4a4 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 @@ -114,6 +114,7 @@
@@ -403,10 +597,20 @@ index 57dd50a..3754259 100644
              float: left
              overflow: hidden
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
-index e81311a..2aa5dab 100644
+index e81311a..44a1f53 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
-@@ -9,12 +9,15 @@
+@@ -1,6 +1,8 @@
++
+ #recent-posts
++
+   & > .recent-post-item:not(:first-child)
+-    margin-top: 20px
++      margin-top: 20px
+ 
+   & > .recent-post-item
+     @extend .cardHover
+@@ -9,12 +11,15 @@
      align-items: center
      overflow: hidden
      height: 16.8em
@@ -422,7 +626,7 @@ index e81311a..2aa5dab 100644
        img.post-bg
          transform: scale(1.1)
  
-@@ -58,6 +61,7 @@
+@@ -58,6 +63,7 @@
          @extend .limit-more-line
          color: var(--text-highlight-color)
          font-size: 1.55em
@@ -430,7 +634,7 @@ index e81311a..2aa5dab 100644
          line-height: 1.4
          transition: all .2s ease-in-out
          -webkit-line-clamp: 2
-@@ -71,7 +75,7 @@
+@@ -71,7 +77,7 @@
            font-size: 1.43em
  
          &:hover
@@ -509,3 +713,25 @@ index 0000000..0938078
 +      opacity: .6
 +    .link_desc,&:has(.link_desc) .link_title
 +      white-space: nowrap
+diff --git a/node_modules/hexo-theme-butterfly/source/js/sticky.js b/node_modules/hexo-theme-butterfly/source/js/sticky.js
+new file mode 100644
+index 0000000..2dc925e
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/source/js/sticky.js
+@@ -0,0 +1,16 @@
++var mySwiper = new Swiper('#stickyList', {
++  direction: 'horizontal',
++  speed: 600,
++  loop: true,
++  effect : 'fade',
++  loopPreventsSlide: false,
++  autoplay: {
++    delay: 20000,
++  },
++  mousewheel: false,
++  pagination: {
++      el: ".swiper-pagination",
++      dynamicBullets: true,
++  },
++})
++
