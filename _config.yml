@@ -162,4 +162,4 @@ asset_pipeline:
     enable: true
 
 butterfly_article_double_row:
-  enable: false
+  enable: true

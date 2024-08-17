@@ -459,7 +459,7 @@ div#banners {
         height: 100%;
         top: 0;
         left: 0;
-        background-image: url('https://w.wallhaven.cc/full/5g/wallhaven-5gqqx3.jpg');
+        background-image: url(/images/image.png);
         background-size: cover;
     }
    

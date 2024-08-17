@@ -41,8 +41,7 @@ highlight_fullpage: true # true: add button to toggle full page
 # formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/Dawson-web || Github || '#24292e'
-  fas fa-envelope: mailto:3096567831@qq.com || Email || '#4a7dbe'
+
 # Image (圖片設置)
 # --------------------------------------
 
@@ -926,6 +925,8 @@ inject:
   head:
     - <link rel="stylesheet" href="/css/home_top.css?1">
     - <link rel="stylesheet" href="/css/color.css?1">
+    - <link rel="stylesheet" href="/css/icat.css?1">
+    - <link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/XMx86jzlQw0brz3/latest/iconfont.css">
 
   bottom:
     - <script src="/js/home_top.js?1"></script>
@@ -998,7 +999,7 @@ CDN:
     # prismjs_autoloader:
     # prismjs_js:
     # prismjs_lineNumber_js:
-    # pjax:
+    pjax: https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
     sharejs:
       enable: true
       sites: facebook,twitter,wechat,weibo,qq #想要顯示的內容
@@ -1009,6 +1010,6 @@ CDN:
     # twikoo:
     # typed:
     # utils:
-    # valine:
+    valine: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js
     # waline_css:
     # waline_js:
