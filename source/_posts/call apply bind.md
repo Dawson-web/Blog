@@ -6,6 +6,7 @@ tags:
   - Js系列
   - 面试
 categories: Js系列
+cover: /images/JS系列/js_2.png
 ---
 
 ---

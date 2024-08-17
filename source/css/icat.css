@@ -78,7 +78,6 @@
     padding: 8px 34px;
     text-align: center;
 }
-
 #travellings {
     padding: 0 14px 0 0;
 }
@@ -107,6 +106,7 @@
     padding-left: 10px;
 }
 
+
 #sidebar #sidebar-menus .menus_items .menus_item_child {
     display: -webkit-box;
     display: -moz-box;
@@ -130,7 +130,6 @@
 #sidebar #sidebar-menus .menus_items a.site-page, #sidebar .menus_item ul {
     padding-left: 0;
 }
-
 #sidebar #sidebar-menus .menus_item_child li {
     width: calc(50% - 8px);
     margin: 4px;
@@ -193,7 +192,6 @@
         margin-top: 4px;
     }
     #sidebar #sidebar-menus .menus_items .icat_menus_item .site-page i:first-child {
-        margin-top: 4px;
         text-align: center;
         padding-left: 0;
     }
@@ -241,7 +239,6 @@
 /* 侧边栏的统计栏美化 */
   
 /* PE端菜单栏美化 */
-
 #nav #menus {
     display: flex;
     justify-content: center;

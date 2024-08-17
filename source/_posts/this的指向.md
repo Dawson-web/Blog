@@ -5,6 +5,7 @@ tags:
   - 面试
 categories: Js系列
 abbrlink: 6c2b46b7
+cover: /images/JS系列/js_1.png
 date: 2024-08-15 09:00:00
 ---
 
