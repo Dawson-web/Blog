@@ -102,7 +102,7 @@ index f6376ca..167a2cd 100644
 +          i.iconfont.icat-bars
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
 new file mode 100644
-index 0000000..665de98
+index 0000000..4382227
 --- /dev/null
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
 @@ -0,0 +1,70 @@
@@ -115,7 +115,7 @@ index 0000000..665de98
 +                        .banners-title
 +                            .banners-title-big 无限活力
 +                            .banners-title-big 与热爱生活
-+                            .banners-title-small BYWIND.XYZ
++                            .banners-title-small Hello World!
 +                        .tags-group-all
 +                            .tags-group-wrapper
 +                                each i in site.data.creativity
@@ -143,15 +143,15 @@ index 0000000..665de98
 +                            i.fas.fa-arrow-right.banner-righticon
 +                    .categoryGroup
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-blue)')
-+                            a.categoryButton.CB1.bikan(href='/categories/学习笔记/')
++                            a.categoryButton.CB1.bikan(href='/categories/前端分享/')
 +                                span.categoryButtonText 必看精选
 +                                i.fas.fa-dove
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-red)')
-+                            a.categoryButton.remen(href='/categories/Hexo魔改/')
++                            a.categoryButton.remen(href='/categories/日常生活/')
 +                                span.categoryButtonText 热门文章
 +                                i.fas.fa-burn
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-green)')
-+                            a.categoryButton.shiyong(href='/categories/后端/')
++                            a.categoryButton.shiyong(href='/categories/Js系列/')
 +                                span.categoryButtonText 实用教程
 +                                i.fas.fa-book
 +                .topGroup
@@ -377,6 +377,25 @@ index 0000000..6f7fb68
 +    return tagsBar(this.site.tags)
 +  }
 +})
+diff --git a/node_modules/hexo-theme-butterfly/scripts/helpers/random.js b/node_modules/hexo-theme-butterfly/scripts/helpers/random.js
+new file mode 100644
+index 0000000..3216720
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/scripts/helpers/random.js
+@@ -0,0 +1,12 @@
++// 随机文章跳转
++hexo.extend.generator.register('random', function (locals) {
++  const config = hexo.config.random || {}
++  const posts = []
++  for (const post of locals.posts.data) {
++      if (post.random !== false) posts.push(post.path)
++  }
++  return {
++      path: config.path || 'bywind/random.js',
++      data: `var posts=${JSON.stringify(posts)};function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};`
++  }
++})
+\ No newline at end of file
 diff --git a/node_modules/hexo-theme-butterfly/scripts/tag/link.js b/node_modules/hexo-theme-butterfly/scripts/tag/link.js
 new file mode 100644
 index 0000000..b93c7bb
@@ -405,6 +424,41 @@ index 0000000..b93c7bb
 +}
 +
 +hexo.extend.tag.register('link', link, { ends: false })
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
+index 22c87c2..2816c8b 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
+@@ -2,8 +2,8 @@
+   --global-font-size: $font-size
+   --global-bg: $body-bg
+   --font-color: $font-black
+-  --hr-border: lighten($theme-hr-color, 50%)
+-  --hr-before-color: lighten($theme-hr-color, 30%)
++  --hr-border: #2563eb
++  --hr-before-color: #2563eb
+   --search-bg: $search-bg
+   --search-input-color: $search-input-color
+   --search-a-color: $search-a-color
+@@ -18,8 +18,8 @@
+   --sidebar-bg: $sidebar-background
+   --btn-hover-color: $button-hover-color
+   --btn-color: $button-color
+-  --btn-bg: $button-bg
+-  --text-bg-hover: rgba($text-bg-hover, .7)
++  --btn-bg: #2563eb
++  --text-bg-hover: #2563eb
+   --light-grey: $light-grey
+   --dark-grey: $dark-grey
+   --white: $white
+@@ -33,7 +33,7 @@
+   --pseudo-hover: $pseudo-hover
+   --headline-presudo: #a0a0a0
+   --scrollbar-color: $scrollbar-color
+-  --default-bg-color: $theme-color
++  --default-bg-color: #2563eb
+   --zoom-bg: #fff
+   --mark-bg: alpha($dark-black, .3)
+ 
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 index f9c1bae..2cbf4a4 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
@@ -449,7 +503,7 @@ index f2feebd..82f4f94 100644
          display: none
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
-index 97cb0ff..e0e2378 100644
+index 97cb0ff..06c54eb 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 @@ -25,6 +25,7 @@
@@ -460,6 +514,24 @@ index 97cb0ff..e0e2378 100644
  
    #site-title,
    #site-subtitle,
+@@ -113,7 +114,7 @@
+     background: 0
+ 
+     #nav
+-      background: rgba(255, 255, 255, .8)
++      background-color: rgba(0, 0, 0, 0.8);
+       box-shadow: 0 5px 6px -5px rgba(133, 133, 133, .6)
+ 
+       a,
+@@ -126,7 +127,7 @@
+       position: fixed
+       top: -60px
+       z-index: 91
+-      background: rgba(255, 255, 255, .8)
++      background-color: rgba(0, 0, 0, 0.8);
+       box-shadow: 0 5px 6px -5px alpha($grey, .6)
+       transition: transform .2s ease-in-out, opacity .2s ease-in-out
+ 
 @@ -272,6 +273,7 @@
    &.show
      opacity: 1
@@ -468,15 +540,28 @@ index 97cb0ff..e0e2378 100644
    #blog-info
      flex: 1
      color: var(--light-grey)
-@@ -304,6 +306,7 @@
+@@ -304,11 +306,19 @@
      display: inline
  
      .menus_item
 +    .icat_menus_item
        position: relative
        display: inline-block
-       padding: 0 0 0 14px
-@@ -343,7 +346,7 @@
+-      padding: 0 0 0 14px
++      width:100px
++      margin: 8px 10px
++      font-size: 20px
++      font-weight: 900
++      text-align: center
++      cursor: pointer
++      
+ 
+       &:hover
++      &.active
+         .menus_item_child
+           display: block
+ 
+@@ -343,7 +353,7 @@
            list-style: none
  
            &:hover
@@ -633,19 +718,21 @@ index 9f63e15..cc28457 100644
 +}
 \ No newline at end of file
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
-index d960fff..b2876ac 100644
+index d960fff..6c4f829 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
-@@ -35,6 +35,9 @@
-     .menus_items
-       padding: 0 10px
+@@ -33,7 +33,10 @@
+       margin: 20px auto
  
+     .menus_items
+-      padding: 0 10px
++      padding: 0 10px 40px
++
 +      .menus_item
 +        margin: 10px 0
-+
+ 
        .site-page
          @extend .limit-one-line
-         position: relative
 @@ -42,14 +45,18 @@
          padding: 3px 28px 3px 20px
          color: var(--font-color)
@@ -667,9 +754,11 @@ index d960fff..b2876ac 100644
  
          &.group
            & > i:last-child
-@@ -69,3 +76,29 @@
+@@ -67,5 +74,30 @@
+ 
+       .menus_item_child
          margin: 0
-         padding-left: 25px
+-        padding-left: 25px
          list-style: none
 +
 +#sidebar

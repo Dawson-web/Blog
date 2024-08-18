@@ -930,6 +930,7 @@ inject:
 
   bottom:
     - <script src="/js/home_top.js?1"></script>
+    - <script src="/bywind/random.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

@@ -215,17 +215,7 @@ a.categoryButton i {
   }
 }
 
-@media screen and (max-width: 768px) {
-  a.categoryButton {
-    border-radius: 8px;
-  }
 
-  .categoryItem {
-    border-radius: 0px;
-    height: 47%;
-    box-shadow: none !important;
-  }
-}
 
 a.categoryButton:after {
   top: 50px;
@@ -254,11 +244,13 @@ a.categoryButton i {
   filter: blur(2px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   a.categoryButton i {
     display: none;
   }
-
+  .topGroup {
+    display: none !important
+  }
   .recent-post-top .categoryGroup {
     min-width: 130px !important;
     margin-bottom: 0.5rem;
@@ -267,22 +259,163 @@ a.categoryButton i {
     overflow: hidden;
     position: relative;
   }
+  #bannerGroup{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 0 auto;
+  }
+  div#banners {
+   
+    background: var(--bywind-card-bg);
+    margin-bottom: 0.5rem;
+    border: var(--style-border);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--bywind-shadow-border);
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.3s;
+    clip-path: inset(0 0 0 0 round 12px);
+  }
+
+  div#banners:hover {
+    box-shadow: var(--bywind-shadow-main);
+  }
+
+  #banners.flink {
+    margin-bottom: 0.5rem;
+  }
+
+  #banners .banner-button-group {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+  }
+
+  #banners .banner-button {
+    padding: 8px 12px;
+    background: var(--bywind-fontcolor);
+    border-radius: 12px;
+    color: var(--bywind-card-bg);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: var(--bywind-shadow-black);
+  }
+
+  #banners .banner-button.secondary {
+    background: var(--bywind-secondbg);
+    border: var(--style-border-always);
+    color: var(--bywind-lighttext);
+    margin-right: 1rem;
+    box-shadow: var(--bywind-shadow-border);
+  }
+
+  #banners .banner-button:hover {
+    background: var(--bywind-theme);
+    color: var(--bywind-white);
+  }
+
+  #banners .banner-button i {
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+
+  .banners-title {
+    top: 2rem;
+    left: 1.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .banners-title-big {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .banners-title-small {
+    font-size: 12px;
+    line-height: 1;
+    color: var(--bywind-secondtext);
+    margin-top: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .tags-group-icon  {
+    width: 12vw !important ;
+    height: 12vw !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    border-radius: 4vw !important
+}
+#banner-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--bywind-theme);
+    color: var(--bywind-white);
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: cubic-bezier(0.71, 0.15, 0.16, 1.15) 0.6s;
+  }
+
+  .bannerText {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: bold;
+  }
+
+  .banner-righticon {
+    font-size: 4rem;
+    opacity: 0.6;
+  }
+
+  #banners:hover #banner-hover {
+    opacity: 1;
+    padding-left: 2rem;
+    background: #4259efc9;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transition: 0.3s;
+    background-size: 200%;
+    cursor: pointer;
+  }
+    #banners #banner-hover i {
+        font-size: 80px;
+        opacity: 0.4;
+    }
+    .categoryGroup {
+      width: 100%;
+      display: flex;
+      flex-direction: row !important;
+      gap: 10px;
+      justify-content: space-around;
+      margin-left:0px !important
+  }
+.categoryItem{
+    width: 40vw;
+    height: 48px;
+    min-width: 100px !important;
+    margin-left:0px !important
 }
 
-.topGroup {
-  display: flex;
 }
 
-#bannerGroup {
-  display: flex;
-}
-
-div#banners {
-  display: none;
-}
-.topGroup .todayCard {
-    display: none;
-}
 @media screen and (min-width: 900px) {
   .topGroup {
     display: flex;
