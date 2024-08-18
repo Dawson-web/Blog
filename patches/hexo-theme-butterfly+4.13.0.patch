@@ -425,7 +425,7 @@ index 0000000..b93c7bb
 +
 +hexo.extend.tag.register('link', link, { ends: false })
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
-index 22c87c2..2816c8b 100644
+index 22c87c2..8d25ddc 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 @@ -2,8 +2,8 @@
@@ -450,7 +450,7 @@ index 22c87c2..2816c8b 100644
    --light-grey: $light-grey
    --dark-grey: $dark-grey
    --white: $white
-@@ -33,7 +33,7 @@
+@@ -33,10 +33,10 @@
    --pseudo-hover: $pseudo-hover
    --headline-presudo: #a0a0a0
    --scrollbar-color: $scrollbar-color
@@ -458,12 +458,54 @@ index 22c87c2..2816c8b 100644
 +  --default-bg-color: #2563eb
    --zoom-bg: #fff
    --mark-bg: alpha($dark-black, .3)
- 
+-
++  --blue: #2563eb
+ body
+   position: relative
+   min-height: 100%
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
-index f9c1bae..2cbf4a4 100644
+index f9c1bae..6e3fea7 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
-@@ -114,6 +114,7 @@
+@@ -29,6 +29,9 @@
+           display: none
+ 
+   .card-info
++    background-color: #425aef
++    color: white
++
+     .author-info
+       &__name
+         font-weight: 500
+@@ -57,13 +60,15 @@
+     #card-info-btn
+       display: block
+       margin-top: 14px
+-      background-color: var(--btn-bg)
+-      color: var(--btn-color)
++      background-color: white
++      color: var(--font-color)
++      border-radius: 5px
+       text-align: center
+       line-height: 2.4
+ 
+       &:hover
+-        background-color: var(--btn-hover-color)
++        background-color: #94a3b8
++        color: white
+ 
+       span
+         padding-left: 10px
+@@ -88,7 +93,7 @@
+       padding: 0 4px
+ 
+       &:hover
+-        color: $text-hover !important
++        color: var(--blue) !important
+ 
+   .aside-list
+     & > span
+@@ -114,6 +119,7 @@
          overflow: hidden
          width: w = 4.2em
          height: w
@@ -471,7 +513,16 @@ index f9c1bae..2cbf4a4 100644
  
          :first-child
            @extend .imgHover
-@@ -164,8 +165,7 @@
+@@ -142,7 +148,7 @@
+           -webkit-line-clamp: 2
+ 
+           &:hover
+-            color: $text-hover
++            color: var(--blue)
+ 
+       &.no-cover
+         min-height: 4.4em
+@@ -164,8 +170,7 @@
  
        &:hover
          padding: 3px 17px
@@ -481,7 +532,15 @@ index f9c1bae..2cbf4a4 100644
        span
          @extend .limit-one-line
  
-@@ -329,7 +329,7 @@
+@@ -321,6 +326,7 @@
+   width: 110px
+   height: 110px
+   border-radius: 70px
++  border: 4px solid white
+ 
+   img
+     width: 100%
+@@ -329,13 +335,14 @@
      object-fit: cover
  
      &:hover
@@ -490,6 +549,33 @@ index f9c1bae..2cbf4a4 100644
  
  .site-data
    display: table
+   width: 100%
+   table-layout: fixed
+ 
++
+   & > a
+     display: table-cell
+ 
+@@ -344,16 +351,17 @@
+ 
+     &:hover
+       div
+-        color: $theme-color !important
++        color: #94a3b8 !important
+ 
+     .headline
+       @extend .limit-one-line
+-      color: var(--font-color)
++      color: white
+ 
+     .length-num
+       margin-top: -.32em
+       color: var(--text-highlight-color)
+       font-size: 1.4em
++      color: white
+ 
+ @keyframes more-btn-move
+   0%,
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl
 index f2feebd..82f4f94 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/comments.styl
@@ -503,7 +589,7 @@ index f2feebd..82f4f94 100644
          display: none
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
-index 97cb0ff..06c54eb 100644
+index 97cb0ff..e70355e 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 @@ -25,6 +25,7 @@
@@ -519,7 +605,7 @@ index 97cb0ff..06c54eb 100644
  
      #nav
 -      background: rgba(255, 255, 255, .8)
-+      background-color: rgba(0, 0, 0, 0.8);
++      background-color: white;
        box-shadow: 0 5px 6px -5px rgba(133, 133, 133, .6)
  
        a,
@@ -528,10 +614,19 @@ index 97cb0ff..06c54eb 100644
        top: -60px
        z-index: 91
 -      background: rgba(255, 255, 255, .8)
-+      background-color: rgba(0, 0, 0, 0.8);
++      background-color: white;
        box-shadow: 0 5px 6px -5px alpha($grey, .6)
        transition: transform .2s ease-in-out, opacity .2s ease-in-out
  
+@@ -145,7 +146,7 @@
+         text-shadow: none
+ 
+         &:hover
+-          color: $light-blue
++          color: var(--blue)
+ 
+     &.fixed
+       #nav
 @@ -272,6 +273,7 @@
    &.show
      opacity: 1
@@ -540,7 +635,25 @@ index 97cb0ff..06c54eb 100644
    #blog-info
      flex: 1
      color: var(--light-grey)
-@@ -304,11 +306,19 @@
+@@ -291,24 +293,35 @@
+       color: var(--white)
+ 
+   a
+-    color: var(--light-grey)
++    color: var(--font-color)
+ 
+     &:hover
+-      color: var(--white)
++      color: var(--blue)
+ 
+   .site-name
+     text-shadow: 2px 2px 4px rgba($dark-black, .15)
+     font-weight: bold
++    height: 36px
++
++    
+ 
+   .menus_items
      display: inline
  
      .menus_item
@@ -561,15 +674,35 @@ index 97cb0ff..06c54eb 100644
          .menus_item_child
            display: block
  
-@@ -343,7 +353,7 @@
+@@ -343,7 +356,8 @@
            list-style: none
  
            &:hover
 -            background: var(--text-bg-hover)
-+            background: #e5e7eb
++            background: var(--blue) 
++          
  
            &:first-child
              border-top-left-radius: 5px
+@@ -360,6 +374,9 @@
+             color: var(--font-color) !important
+             text-shadow: none !important
+             
++            &:hover
++              color: #e5e7eb !important
++
+   &.hide-menu
+     #toggle-menu
+       display: inline-block !important
+@@ -392,7 +409,7 @@
+         z-index: -1
+         width: 0
+         height: 3px
+-        background-color: lighten($theme-color, 30%)
++        background-color: var(--blue) 
+         content: ''
+         transition: all .3s ease-in-out
+ 
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
 index 9f63e15..cc28457 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
@@ -717,6 +850,18 @@ index 9f63e15..cc28457 100644
 +  background-size: cover;
 +}
 \ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/pagination.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/pagination.styl
+index 6d729e3..f3aba56 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/pagination.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/pagination.styl
+@@ -1,4 +1,7 @@
+ #pagination
++  width: 100%
++
++   
+   .pagination
+     margin-top: 20px
+     text-align: center
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
 index d960fff..6c4f829 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
@@ -786,6 +931,19 @@ index d960fff..6c4f829 100644
 +        span
 +          margin-top: -8px
 +
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
+index 32096a5..9073217 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
+@@ -8,7 +8,7 @@
+   flex: 1 auto
+   margin: 0 auto
+   padding: 40px 15px
+-  max-width: 1200px
++  max-width: 1400px
+   width: 100%
+ 
+   +maxWidth900()
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl b/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
 index 57dd50a..3754259 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl

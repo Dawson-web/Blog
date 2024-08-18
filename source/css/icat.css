@@ -51,7 +51,7 @@
 #nav.show {
     display: flex;
     justify-content: start;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: white;
 }
 #nav .site-page {
     padding-bottom: 14px;

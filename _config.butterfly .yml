@@ -3,9 +3,10 @@
 # --------------------------------------
 
 nav:
-  logo: # image
+  logo: /images/favicon.png # image
   display_title: false
   fixed: false # fixed navigation bar
+  title: 凌晨两点的夜猫子
 
 # Menu 目錄
 menu:
