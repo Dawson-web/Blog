@@ -927,6 +927,8 @@ inject:
     - <link rel="stylesheet" href="/css/home_top.css?1">
     - <link rel="stylesheet" href="/css/color.css?1">
     - <link rel="stylesheet" href="/css/icat.css?1">
+    - <link rel="stylesheet" href="/css/category_bar.css?1">
+    - <link rel="stylesheet" href="/css/cardlistpost.css?1">
     - <link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/XMx86jzlQw0brz3/latest/iconfont.css">
 
   bottom:

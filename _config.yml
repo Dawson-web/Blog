@@ -115,7 +115,9 @@ theme: "butterfly"
 browsersync:
   server:
     baseDir: source
-
+    ghostMode:
+    scroll: true
+  instanceName: "uniqueString"
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

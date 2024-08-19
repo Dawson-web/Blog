@@ -1,0 +1,16 @@
+diff --git a/node_modules/hexo-butterfly-article-double-row/index.js b/node_modules/hexo-butterfly-article-double-row/index.js
+index 7286ca8..02d71df 100644
+--- a/node_modules/hexo-butterfly-article-double-row/index.js
++++ b/node_modules/hexo-butterfly-article-double-row/index.js
+@@ -51,10 +51,7 @@ function common_injector(name, item_comfig, temple_html_text, js_text, css_text)
+ hexo.extend.filter.register('after_generate',function() {
+     if(hexo.config.butterfly_article_double_row.enable){
+         var butterfly_article_double_row_comfig = hexo.config.butterfly_article_double_row;
+-        var css_text =`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+-<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\\A";
+-  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+-`
++        var css_text =``
+ 
+         common_injector('butterfly_article_double_row', butterfly_article_double_row_comfig, '', '', css_text)
+     }
