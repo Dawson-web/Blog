@@ -65,5 +65,6 @@ display:none;/*隐藏文章详情*/
 #recent-posts > .recent-post-item {
  margin: 0 auto;
  width:90%;/*控制手机自适应*/
+ margin-top: 15px;
 }
 }

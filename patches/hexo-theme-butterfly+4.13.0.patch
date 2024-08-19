@@ -301,6 +301,18 @@ index 663fe50..95d40d0 100644
 +  include ./fullpage-loading.pug
    include ./pace.pug
 \ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/mixins/post-ui.pug b/node_modules/hexo-theme-butterfly/layout/includes/mixins/post-ui.pug
+index bd545e4..90ffcfc 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/mixins/post-ui.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/mixins/post-ui.pug
+@@ -2,6 +2,7 @@ mixin postUI(posts)
+   each article , index in page.posts.data
+     .recent-post-item
+       -
++        let label = article.label
+         let link = article.link || article.path
+         let title = article.title || _p('no_title')
+         const position = theme.cover.position
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug
 new file mode 100644
 index 0000000..e6a0eac
@@ -865,10 +877,18 @@ index 6d729e3..f3aba56 100644
      margin-top: 20px
      text-align: center
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
-index d960fff..6c4f829 100644
+index d960fff..0f93727 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
-@@ -33,7 +33,10 @@
+@@ -6,6 +6,7 @@
+     width: 100%
+     height: 100%
+     background: alpha($dark-black, .8)
++    backdrop-filter: blur(4px);
+ 
+   #sidebar-menus
+     position: fixed
+@@ -33,7 +34,10 @@
        margin: 20px auto
  
      .menus_items
@@ -880,7 +900,7 @@ index d960fff..6c4f829 100644
  
        .site-page
          @extend .limit-one-line
-@@ -42,14 +45,18 @@
+@@ -42,14 +46,18 @@
          padding: 3px 28px 3px 20px
          color: var(--font-color)
          font-size: 1.15em
@@ -901,12 +921,25 @@ index d960fff..6c4f829 100644
  
          &.group
            & > i:last-child
-@@ -67,5 +74,30 @@
+@@ -67,5 +75,41 @@
  
        .menus_item_child
          margin: 0
 -        padding-left: 25px
          list-style: none
++
++        li > a 
++          display:flex !important
++          flex-direction: row !important
++          flex-wrap: nowarp !important
++          align-items: center !important
++          justify-content: start !important
++          gap: 15px !important
++          padding: 5px 0 5px 20px !important
++          font-size: 14px !important
++        
++
++
 +
 +#sidebar
 +  #sidebar-menus
@@ -915,24 +948,22 @@ index d960fff..6c4f829 100644
 +      width: 50%
 +
 +      .site-page
-+        text-align: center
-+        margin: 4px
-+        display: flex
-+        flex-direction: column
-+        align-items: center
-+        padding: 8px 0
++        display:flex !important
++        flex-direction: row !important
++        flex-wrap: nowarp !important
++        align-items: center !important
++        justify-content: start !important
++        gap: 15px !important
++        padding: 5px 0 5px 20px !important
++        font-size: 14px !important
 +        border-radius: 12px
-+        font-size: 14px
++
 +
 +        i:first-child
 +          padding-left: 0
 +
 +        & > .icat-essay
 +          font-weight: 500
-+
-+        span
-+          margin-top: -8px
-+
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
 index 32096a5..9073217 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
@@ -1019,21 +1050,18 @@ index 57dd50a..0cadb1a 100644
                object-fit: cover
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
-index e81311a..2e40815 100644
+index e81311a..9b7b27d 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,5 @@
 +
  #recent-posts
 -  & > .recent-post-item:not(:first-child)
 -    margin-top: 20px
-+
-+  & > .recent-post-item
-+      margin-top: 15px
  
    & > .recent-post-item
      @extend .cardHover
-@@ -9,14 +11,20 @@
+@@ -9,14 +8,20 @@
      align-items: center
      overflow: hidden
      height: 16.8em
@@ -1055,7 +1083,7 @@ index e81311a..2e40815 100644
  
      &.ads-wrap
        display: block !important
-@@ -58,6 +66,7 @@
+@@ -58,6 +63,7 @@
          @extend .limit-more-line
          color: var(--text-highlight-color)
          font-size: 1.55em
@@ -1063,7 +1091,7 @@ index e81311a..2e40815 100644
          line-height: 1.4
          transition: all .2s ease-in-out
          -webkit-line-clamp: 2
-@@ -71,7 +80,7 @@
+@@ -71,7 +77,7 @@
            font-size: 1.43em
  
          &:hover
