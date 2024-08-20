@@ -439,7 +439,7 @@ index 0000000..b93c7bb
 +
 +hexo.extend.tag.register('link', link, { ends: false })
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
-index 22c87c2..8d25ddc 100644
+index 22c87c2..1a85c14 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 @@ -2,8 +2,8 @@
@@ -477,6 +477,14 @@ index 22c87c2..8d25ddc 100644
  body
    position: relative
    min-height: 100%
+@@ -44,6 +44,7 @@ body
+   color: var(--font-color)
+   font-size: var(--global-font-size)
+   font-family: $font-family
++  font-weight: 700
+   line-height: $text-line-height
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+ 
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
 index f9c1bae..6e3fea7 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/aside.styl
