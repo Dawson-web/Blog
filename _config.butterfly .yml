@@ -24,6 +24,7 @@ menu:
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
   装备: /equipment/ || fas fa-laptop
+  项目: /project/ || fas fa-desktop
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -931,6 +932,7 @@ inject:
     - <link rel="stylesheet" href="/css/category_bar.css?1">
     - <link rel="stylesheet" href="/css/cardlistpost.css?1">
     - <link rel="stylesheet" href="/css/equipment.css">
+    - <link rel="stylesheet" href="/css/project.css">
     - <link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/XMx86jzlQw0brz3/latest/iconfont.css">
 
   bottom:
