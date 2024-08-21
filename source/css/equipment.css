@@ -38,7 +38,7 @@
 	transform:scale(1.2);
 }
 #icat-equipment .equipment .icat-equipment-box .icat-equipment-content {
-  padding: 16px;
+  padding: 8px;
 }
 #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-name {
   color: var(--icat-fontcolor);
@@ -67,7 +67,7 @@
   overflow: hidden;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 #icat-equipment .equipment .icat-equipment-box .icat-equipment-content .icat-equipment-box-more {
   display: flex;
@@ -94,7 +94,7 @@
     gap: 10px;
   }
   #icat-equipment .equipment > .icat-equipment-box {
-    width: calc(100% / 3 - 7px);
+    width: calc(100% / 2 - 7px);
   }
 }
 @media screen and (max-width: 768px) {

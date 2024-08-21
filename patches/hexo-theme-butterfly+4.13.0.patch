@@ -313,6 +313,69 @@ index bd545e4..90ffcfc 100644
          let link = article.link || article.path
          let title = article.title || _p('no_title')
          const position = theme.cover.position
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/equipment.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/equipment.pug
+new file mode 100644
+index 0000000..b17c253
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/page/equipment.pug
+@@ -0,0 +1,57 @@
++script.
++    var icatequipment = {
++      replaceAll: function (e, n, t) {
++        return e.split(n).join(t);
++      },
++      commentText: function(e) {
++        if (e == "undefined" || e == "null") e = "好棒！";
++        var n = document.getElementsByClassName("el-textarea__inner")[0],
++          t = document.createEvent("HTMLEvents");
++        if (!n) return;
++        t.initEvent("input", !0, !0);
++        var o = icatequipment.replaceAll(e, "\n", "\n> ");
++        (n.value = "> " + o + "\n\n"), n.dispatchEvent(t);
++        var i = document.querySelector("#post-comment")
++          .offsetTop;
++        window.scrollTo(0, i - 80),
++          n.focus(),
++          n.setSelectionRange(-1, -1),
++          document.getElementById("comment-tips") && document.getElementById("comment-tips")
++          .classList.add("show");
++      }
++    }
++
++#icat-equipment
++  - var result = ''
++  each i in site.data.equipment
++    - let className = i.class_name ? markdown(`## ${i.class_name}`) : ""
++    - let classDesc = i.class_desc ? `<div class="equipment-desc">${i.class_desc}</div>` : ""
++
++    - let listResult = `${className}${classDesc} `
++    - let listContent = ''
++    each j in i.equipment_list
++      - let details = ''
++      -
++        if (j.details_link) {
++          details = `<a href="${j.details_link}" title="本站关于 ${j.name} 的产品体验报告" target="_blank" rel="external nofollow">官网</a>`
++        } else if (j.details_flink) {
++          details = `<a href="${j.details_flink}" title="跳转到 ${j.name} 的产品详情" target="_blank" rel="external nofollow"  >官网</a>`
++        }
++        listContent += `
++          <div class="icat-equipment-box">
++            <img src="${j.image}">
++            <div class="icat-equipment-content">
++              <div class="icat-equipment-name">${j.name}</div>
++              <div class="icat-equipment-custom">${j.custom}</div>
++              <div class="icat-equipment-opinion">${j.opinion}</div>
++              <div class="icat-equipment-box-more">
++                ${details}
++
++              </div>
++            </div>
++          </div>`
++      -
++    - listResult += `<div class="equipment">${listContent}</div>`
++    - result += listResult
++  != result + page.content
++
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug
 new file mode 100644
 index 0000000..e6a0eac
@@ -324,6 +387,19 @@ index 0000000..e6a0eac
 +    !=getarray_bar("tag")
 +  a.category-bar-more(href="/tags/") 更多
 \ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/page.pug b/node_modules/hexo-theme-butterfly/layout/page.pug
+index 6c810ef..01c5c72 100644
+--- a/node_modules/hexo-theme-butterfly/layout/page.pug
++++ b/node_modules/hexo-theme-butterfly/layout/page.pug
+@@ -12,6 +12,8 @@ block content
+         include includes/page/flink.pug
+       when 'categories'
+         include includes/page/categories.pug
++      when 'equipment'
++        include includes/page/equipment.pug
+       default
+         include includes/page/default-page.pug
+ 
 diff --git a/node_modules/hexo-theme-butterfly/layout/tag.pug b/node_modules/hexo-theme-butterfly/layout/tag.pug
 index 9f99658..bb7479e 100644
 --- a/node_modules/hexo-theme-butterfly/layout/tag.pug
@@ -973,7 +1049,7 @@ index d960fff..0f93727 100644
 +        & > .icat-essay
 +          font-weight: 500
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
-index 32096a5..9073217 100644
+index 32096a5..f62c491 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
 @@ -8,7 +8,7 @@
@@ -985,6 +1061,15 @@ index 32096a5..9073217 100644
    width: 100%
  
    +maxWidth900()
+@@ -41,7 +41,7 @@
+ 
+   // 隱藏aside
+   &.hide-aside
+-    max-width: 1000px
++    max-width: 1400px
+ 
+     +minWidth2000()
+       max-width: 1300px
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl b/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
 index 57dd50a..0cadb1a 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/flink.styl
