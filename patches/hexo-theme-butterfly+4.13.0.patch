@@ -439,7 +439,7 @@ index 0000000..b93c7bb
 +
 +hexo.extend.tag.register('link', link, { ends: false })
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
-index 22c87c2..1a85c14 100644
+index 22c87c2..a54249b 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_global/index.styl
 @@ -2,8 +2,8 @@
@@ -481,7 +481,7 @@ index 22c87c2..1a85c14 100644
    color: var(--font-color)
    font-size: var(--global-font-size)
    font-family: $font-family
-+  font-weight: 700
++  font-weight: 500
    line-height: $text-line-height
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
  

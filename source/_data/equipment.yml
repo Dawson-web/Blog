@@ -1,0 +1,38 @@
+- class_name: 日常生产力
+  class_desc: 平常生活、工作增添效率的产品
+  equipment_list:
+    - name: RedmiBook Pro 15 锐龙版
+      custom: 主力 | 512G
+      opinion: ......别问为啥买了这个,当初看着和Mac很像觉得挺好看的就买了,不过至少没啥大毛病也还不错
+      details_flink: https://www.mi.com/redmibook/pro15-r7
+      image: https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1689729487.47189603.png
+    - name: Redmi K50 Pro
+      custom: 主力 | 12+216G
+      opinion: ......幻境外壳是真的丑,唉
+      details_flink: https://www.mi.com/shop/buy/detail?product_id=10000374
+      image: https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1647430877.28091875.png
+    - name: Xiaomi Pad 6 Pro
+      custom: 主力 | 8+128G
+      opinion: 追剧和微办公使用,不过主要是拿来玩金铲铲了嘿嘿嘿
+      details_flink: https://www.mi.com/shop/buy/detail?product_id=18333&cfrom=search
+      image: https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1681708013.12396454.png
+    - name: Redmi Buds 5
+      custom: 主力
+      opinion: 外出使用,这价位这种降噪值得点赞
+      details_flink: https://www.mi.com/shop/buy/detail?product_id=19180&cfrom=search
+      image: https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1695282877.89136915.png
+    - name: 万魔 SonoFlow
+      custom: 备用
+      opinion: 主要是在家或者寝室写代码的时候使用
+      details_flink: https://www.1more.com/product/show-890-1.html
+      image: /images/equipment/SonoFlow.png
+    - name: VGN V98PRO V2 极地
+      custom: 主力
+      opinion: 我的第二把键盘,也是我最常用的键盘,手感很好,键程适中,适合长时间打字,至于第一把键盘......嗯放坏了
+      details_flink: https://www.vgnclub.com/goods/category?id=57
+      image: https://static.vgnclub.com/vgn/1/common/images/20240410/20240410052448171274108893975.jpg_webp
+    - name: 罗技 G102
+      custom: 主力
+      opinion: 均衡之刃
+      details_flink: https://www.logitechg.com/zh-cn/products/gaming-mice.html
+      image: https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g203/g203-white-gallery-1.png?v=1
