@@ -23,7 +23,7 @@ menu:
     # 分类: /category || fas fa-home
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
-  项目: /equipment/ || fas fa-code
+  装备: /equipment/ || fas fa-laptop
 
 # Code Blocks (代碼相關)
 # --------------------------------------
