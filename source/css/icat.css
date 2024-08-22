@@ -204,9 +204,7 @@
     width: 100px;
     border-radius: 50%;
 }
-#sidebar .open > .avatar-img img {
-    border: 5px #fff solid;
-}
+
 #sidebar .open > .avatar-img::before {
     bottom: 8px;
     height: 12px;
@@ -232,6 +230,14 @@
     border-radius: 12px;
     border: var(--style-border-always);
 }
+
+.sidebar-site-data  > a > .headline {
+    color: var(--font-color);
+}
+.sidebar-site-data  > a > .length-num {
+    color: var(--font-color);
+}
+
 @media screen and (max-width: 768px) {
     .site-data {
         width: 94%;
