@@ -1,10 +1,10 @@
 ---
-title: Rdtf基于Next.js构建的快速开发模板
+title: Rdtf基于Vite构建的快速开发模板
 tags: Rtdf
 categories: Rtdf模板
 abbrlink: c175e719
 date: 2024-08-20 21:00:00
-cover: /images/Rdtf基于Next.js构建的快速开发模板/cover.png
+cover: /images/Rdtf基于Vite构建的快速开发模板/cover.png
 ---
 
 ---
@@ -17,9 +17,7 @@ cover: /images/Rdtf基于Next.js构建的快速开发模板/cover.png
 
 不用每次都去写重复的代码，提高我们的开发效率，
 
-至于为什么基于Next.js，因为它提供了很多开箱即用的功能，配置比较全面，
-
-且我相对vite来说更熟悉一些，所以选择了Next.js。
+且我相对vite来说更熟悉一些，所以选择了Vite。
 
 大家可以访问 [Rdtf官网](https://www.dawsons.love/)查看Demo模板
 
@@ -27,7 +25,7 @@ cover: /images/Rdtf基于Next.js构建的快速开发模板/cover.png
 
 ## 项目介绍
 
-Rdtf是一个基于Next.js构建的快速开发模板，它提供了一些常用的功能、组件、配置、工具等，可以帮助我们快速搭建一个React项目。
+Rdtf是一个基于Vite构建的快速开发模板，它提供了一些常用的功能、组件、配置、工具等，可以帮助我们快速搭建一个React项目。
 
 Rdtf主要采用Mantine组件以及Tailwind CSS进行样式开发，同时使用TypeScript进行类型检查，保证代码的健壮性。
 
@@ -36,10 +34,10 @@ Rdtf主要采用Mantine组件以及Tailwind CSS进行样式开发，同时使用
 
 ## 预览
 
-![Rdtf基于Next.js构建的快速开发模板](/images/Rdtf基于Next.js构建的快速开发模板/1.png)
-![Rdtf基于Next.js构建的快速开发模板](/images/Rdtf基于Next.js构建的快速开发模板/2.png)
-![Rdtf基于Next.js构建的快速开发模板](/images/Rdtf基于Next.js构建的快速开发模板/3.png)
-![Rdtf基于Next.js构建的快速开发模板](/images/Rdtf基于Next.js构建的快速开发模板/4.png)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/1.png)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/2.png)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/3.png)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/4.png)
 
 
 ## 项目结构
@@ -48,17 +46,13 @@ Rdtf的大概项目结构如下：
 
 ```
 src
-├── app
+├── pages
 ├── components
-│   ├──  client
-│   ├──  motion
-│   ├──  provider
-│   ├──  ui
 ├── config
 │   ├── index.tsx
 
 ```
-在整个src下，我们主要分为app、components、config三个文件夹，其中app文件夹用于存放页面文件，components文件夹用于存放组件文件，config
+在整个src下，我们主要分为pages、components、config三个文件夹，其中pages文件夹用于存放页面文件，components文件夹用于存放组件文件，config
 
 文件夹用于存放配置文件。
 
