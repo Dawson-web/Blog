@@ -2,7 +2,7 @@
 title: Rdtf组件Form表单
 tags: Rtdf
 categories: Rtdf模板
-cover: /images/Rdtf组件Form表单/cover.png
+cover: /images/Rdtf组件Form表单/cover.webp
 abbrlink: 8c780ec5
 date: 2024-08-21 09:00:00
 ---

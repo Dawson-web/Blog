@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: /images/favicon.png # image
+  logo: /images/favicon.webp # image
   display_title: false
   fixed: false # fixed navigation bar
   title: 凌晨两点的夜猫子
@@ -49,11 +49,11 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /images/favicon.png
+favicon: /images/favicon.webp
 
 # Avatar (頭像)
 avatar:
-  img: /images/avatar.png
+  img: /images/avatar.webp
   effect: false
 
 # Disable all banner image
@@ -95,7 +95,7 @@ cover:
   # left/right/both
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: /images/default.png
+  default_cover: /images/default.webp
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:

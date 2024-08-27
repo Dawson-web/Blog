@@ -23,7 +23,7 @@
   link_list:
     - name: CUIT指南
       link: https://guide.cuit.dev/
-      avatar: /images/school.png
+      avatar: /images/school.webp
       descr: 入学指南
     - name: 30tool
       link: https://www.30aitool.com/

@@ -4,7 +4,7 @@ tags: Rtdf
 categories: Rtdf模板
 abbrlink: c175e719
 date: 2024-08-20 21:00:00
-cover: /images/Rdtf基于Vite构建的快速开发模板/cover.png
+cover: /images/Rdtf基于Vite构建的快速开发模板/cover.webp
 ---
 
 ---
@@ -34,10 +34,10 @@ Rdtf主要采用Mantine组件以及Tailwind CSS进行样式开发，同时使用
 
 ## 预览
 
-![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/1.png)
-![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/2.png)
-![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/3.png)
-![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/4.png)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/1.webp)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/2.webp)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/3.webp)
+![Rdtf基于Vite构建的快速开发模板](/images/Rdtf基于Vite构建的快速开发模板/4.webp)
 
 
 ## 项目结构

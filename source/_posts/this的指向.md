@@ -5,7 +5,7 @@ tags:
   - 面试
 categories: Js系列
 abbrlink: 6c2b46b7
-cover: /images/JS系列/js_1.png
+cover: /images/JS系列/js_1.webp
 date: 2024-08-15 09:00:00
 ---
 
@@ -37,7 +37,7 @@ date: 2024-08-15 09:00:00
   console.log(this) // > [object Window]
   ```
 
-  ![this的指向](/images/this的指向/1.png)
+  ![this的指向](/images/this的指向/1.webp)
 
 - 隐式绑定
 
@@ -54,7 +54,7 @@ date: 2024-08-15 09:00:00
   obj.test() // > Hello!
   ```
 
-  ![this的指向](/images/this的指向/2.png)
+  ![this的指向](/images/this的指向/2.webp)
 
 - new绑定
 
@@ -69,7 +69,7 @@ date: 2024-08-15 09:00:00
   console.log(obj.x) // > Hello!
   ```
 
-  ![this的指向](/images/this的指向/3.png)
+  ![this的指向](/images/this的指向/3.webp)
 
 
 - 显示绑定
@@ -95,7 +95,7 @@ date: 2024-08-15 09:00:00
   // Expected output: 42
   
   ```
-  ![this的指向](/images/this的指向/4.png)
+  ![this的指向](/images/this的指向/4.webp)
 
 
 - 箭头函数
@@ -136,7 +136,7 @@ date: 2024-08-15 09:00:00
 
   ```
 
-  ![this的指向](/images/this的指向/5.png)
+  ![this的指向](/images/this的指向/5.webp)
 
 ## 绑定优先级:
 
