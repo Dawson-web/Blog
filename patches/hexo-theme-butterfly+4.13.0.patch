@@ -1002,6 +1002,19 @@ index 6d729e3..f3aba56 100644
    .pagination
      margin-top: 20px
      text-align: center
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/post.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/post.styl
+index b5a8583..06a6e0c 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_layout/post.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_layout/post.styl
+@@ -19,7 +19,7 @@ beautify()
+     &:before
+       position: absolute
+       top: calc(50% - 7px)
+-      color: $title-prefix-icon-color
++      color: var(--blue)
+       content: $title-prefix-icon
+       left: 0
+       line-height: 1
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
 index d960fff..0f93727 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/sidebar.styl
