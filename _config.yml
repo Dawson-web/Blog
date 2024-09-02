@@ -165,3 +165,7 @@ asset_pipeline:
 
 butterfly_article_double_row:
   enable: true
+
+# 站点地图
+sitemap:
+  path: sitemap.xml
