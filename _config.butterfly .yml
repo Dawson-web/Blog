@@ -243,7 +243,7 @@ aside:
       link: https://github.com/Dawson-web
   card_announcement:
     enable: true
-    content: 一起的开始都是 "Hello World!"
+    content: 一切的开始都是 "Hello World!"
   card_recent_post:
     enable: true
     limit: 2 # if set 0 will show all
