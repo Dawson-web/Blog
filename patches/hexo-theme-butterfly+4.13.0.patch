@@ -1103,6 +1103,18 @@ index d960fff..0f93727 100644
 +
 +        & > .icat-essay
 +          font-weight: 500
+diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/archives.styl b/node_modules/hexo-theme-butterfly/source/css/_page/archives.styl
+index 309e00c..c6e2f83 100644
+--- a/node_modules/hexo-theme-butterfly/source/css/_page/archives.styl
++++ b/node_modules/hexo-theme-butterfly/source/css/_page/archives.styl
+@@ -100,6 +100,7 @@
+       overflow: hidden
+       width: 80px
+       height: 80px
++      border-radius: 8px
+ 
+       :first-child
+         @extend .imgHover
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl b/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
 index 32096a5..f62c491 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/common.styl
