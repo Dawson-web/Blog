@@ -9,7 +9,18 @@
     z-index: 1;
     
 }
-
+@media screen and (min-width: 2000px) {
+  #home_top {
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 70px;
+    padding: 0 1.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    
+}
+}
 @media screen and (max-width: 768px) {
     #home_top {
         padding:0;
@@ -121,7 +132,6 @@ span.recent-post-top-text {
 @media screen and (max-width: 768px) {
     .recent-top-post-group {
         border-radius:0;
-        background: var(--bywind-background)
     }
 
     .recent-post-top-text {

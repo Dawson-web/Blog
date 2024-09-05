@@ -40,6 +40,26 @@ index 0038afc..bca6453 100644
  
  //- Open_Graph
  include ./head/Open_Graph.pug
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/header/index.pug b/node_modules/hexo-theme-butterfly/layout/includes/header/index.pug
+index 33e01db..2d986c4 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/header/index.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/header/index.pug
+@@ -35,6 +35,15 @@ header#page-header(class=`${isHomeClass+isFixedClass}` style=bg_img)
+   if top_img !== false
+     if is_post()
+       include ./post-info.pug
++      section.main-hero-waves-area.waves-area
++        svg.waves-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', viewBox='0 24 150 28', preserveAspectRatio='none', shape-rendering='auto')
++          defs
++            path#gentle-wave(d='M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z')
++          g.parallax
++            use(href='#gentle-wave', x='48', y='0')
++            use(href='#gentle-wave', x='48', y='3')
++            use(href='#gentle-wave', x='48', y='5')
++            use(href='#gentle-wave', x='48', y='7')
+     else if is_home() 
+       #site-info
+         h1#site-title=site_title
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/header/menu_item.pug b/node_modules/hexo-theme-butterfly/layout/includes/header/menu_item.pug
 index d172db7..6e783fc 100644
 --- a/node_modules/hexo-theme-butterfly/layout/includes/header/menu_item.pug
@@ -729,7 +749,7 @@ index f2feebd..82f4f94 100644
          display: none
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
-index 97cb0ff..e70355e 100644
+index 97cb0ff..8854ce9 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/head.styl
 @@ -25,6 +25,7 @@
@@ -740,6 +760,23 @@ index 97cb0ff..e70355e 100644
  
    #site-title,
    #site-subtitle,
+@@ -92,14 +93,14 @@
+ 
+   // post
+   &.post-bg
+-    height: 400px
++    height: 500px
+ 
+     +maxWidth768()
+       height: 360px
+ 
+   #post-info
+     position: absolute
+-    bottom: 30px
++    bottom: 70px
+     padding: 0 8%
+     width: 100%
+ 
 @@ -113,7 +114,7 @@
      background: 0
  
@@ -844,7 +881,7 @@ index 97cb0ff..e70355e 100644
          transition: all .3s ease-in-out
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
-index 9f63e15..cc28457 100644
+index 9f63e15..4fbb9fd 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
 @@ -1,95 +1,50 @@
@@ -986,7 +1023,7 @@ index 9f63e15..cc28457 100644
 +    }
 +
 +.loading-img {
-+  background: url(https://www.betula.space/images/avatar.png) no-repeat center center;
++  background: url(/images/avatar.webp) no-repeat center center;
 +  background-size: cover;
 +}
 \ No newline at end of file
@@ -1210,7 +1247,7 @@ index 57dd50a..0cadb1a 100644
                object-fit: cover
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
-index e81311a..9b7b27d 100644
+index e81311a..1c10939 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_page/homepage.styl
 @@ -1,6 +1,5 @@
@@ -1221,12 +1258,11 @@ index e81311a..9b7b27d 100644
  
    & > .recent-post-item
      @extend .cardHover
-@@ -9,14 +8,20 @@
+@@ -9,14 +8,18 @@
      align-items: center
      overflow: hidden
      height: 16.8em
 +    border-radius: 15px
-+    border: 2px solid white
 +    transition: all .2s ease-in-out
 +
  
@@ -1235,7 +1271,6 @@ index e81311a..9b7b27d 100644
        height: auto
  
      &:hover
-+      border: 2px solid #2563eb
 +      transform: scale(1.02)
        img.post-bg
 -        transform: scale(1.1)
@@ -1243,7 +1278,7 @@ index e81311a..9b7b27d 100644
  
      &.ads-wrap
        display: block !important
-@@ -58,6 +63,7 @@
+@@ -58,6 +61,7 @@
          @extend .limit-more-line
          color: var(--text-highlight-color)
          font-size: 1.55em
@@ -1251,7 +1286,7 @@ index e81311a..9b7b27d 100644
          line-height: 1.4
          transition: all .2s ease-in-out
          -webkit-line-clamp: 2
-@@ -71,7 +77,7 @@
+@@ -71,7 +75,7 @@
            font-size: 1.43em
  
          &:hover
