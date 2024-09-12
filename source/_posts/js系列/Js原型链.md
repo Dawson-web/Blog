@@ -2,7 +2,6 @@
 title: Js原型链
 tags:
   - Js系列
-  - 面试
 categories: Js系列
 cover: /images/Js原型链/cover.webp
 abbrlink: afef1582

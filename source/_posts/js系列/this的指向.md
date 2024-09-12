@@ -2,7 +2,6 @@
 title: this的指向
 tags:
   - Js系列
-  - 面试
 categories: Js系列
 abbrlink: 6c2b46b7
 cover: /images/JS系列/js_1.webp
