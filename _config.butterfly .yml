@@ -21,10 +21,11 @@ menu:
     归档: /archives || fas fa-archive
     标签: /tags || fas fa-tags
     # 分类: /category || fas fa-home
+  我的 || fas fa-user:
+    装备: /equipment/ || fas fa-laptop
+    项目: /project/ || fas fa-desktop
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
-  装备: /equipment/ || fas fa-laptop
-  项目: /project/ || fas fa-desktop
 
 # Code Blocks (代碼相關)
 # --------------------------------------
