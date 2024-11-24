@@ -63,3 +63,36 @@ checkboxInputs.forEach(function(input) {
         input.value = "";
     });
 ```
+### 一把梭哈!!!
+```ts
+  // 使用querySelectorAll方法查找所有符合条件的input元素
+var radioInputs = document.querySelectorAll('input[type="radio"]');
+
+// 遍历找到的每个元素并将其从DOM树中删除
+radioInputs.forEach(function(input) {
+    input.parentNode.removeChild(input);
+});
+
+// 使用querySelectorAll方法查找所有符合条件的input元素
+var checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
+
+// 遍历找到的每个元素并将其从DOM树中删除
+checkboxInputs.forEach(function(input) {
+    input.parentNode.removeChild(input);
+});
+
+var targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg');
+
+   // 遍历找到的每个元素并将其从DOM树中删除
+   targetDivs.forEach(function(div) {
+       div.parentNode.removeChild(div);
+   });
+
+   // 使用querySelectorAll方法查找所有符合条件的input元素,填空题的匹配较简单可能会出现错误删除请自行辨别
+var targetInputs = document.querySelectorAll('input');
+
+// 遍历找到的每个元素并清空其value属性值
+targetInputs.forEach(function(input) {
+    input.value = "";
+});
+```
