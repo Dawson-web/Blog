@@ -25,7 +25,7 @@ abbrlink:
 
 ```ts
 // 使用querySelectorAll方法查找所有符合条件的input元素
-var radioInputs = document.querySelectorAll('input[type="radio"]');
+const radioInputs = document.querySelectorAll('input[type="radio"]');
 
 // 遍历找到的每个元素并将其从DOM树中删除
 radioInputs.forEach(function(input) {
@@ -36,7 +36,7 @@ radioInputs.forEach(function(input) {
 
 ```ts
 // 使用querySelectorAll方法查找所有符合条件的input元素
-var checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
+const checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
 
 // 遍历找到的每个元素并将其从DOM树中删除
 checkboxInputs.forEach(function(input) {
@@ -45,7 +45,7 @@ checkboxInputs.forEach(function(input) {
 ```
 ### 去除答案是否正确结果显示
 ```ts
- var targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg');
+ const targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg');
 
     // 遍历找到的每个元素并将其从DOM树中删除
     targetDivs.forEach(function(div) {
@@ -56,7 +56,7 @@ checkboxInputs.forEach(function(input) {
 ### 去除填空题
 ```ts
     // 使用querySelectorAll方法查找所有符合条件的input元素,填空题的匹配较简单可能会出现错误删除请自行辨别
-    var targetInputs = document.querySelectorAll('input');
+    const targetInputs = document.querySelectorAll('input');
 
     // 遍历找到的每个元素并清空其value属性值
     targetInputs.forEach(function(input) {
@@ -66,7 +66,7 @@ checkboxInputs.forEach(function(input) {
 ### 一把梭哈!!!
 ```ts
   // 使用querySelectorAll方法查找所有符合条件的input元素
-var radioInputs = document.querySelectorAll('input[type="radio"]');
+const radioInputs = document.querySelectorAll('input[type="radio"]');
 
 // 遍历找到的每个元素并将其从DOM树中删除
 radioInputs.forEach(function(input) {
@@ -74,14 +74,14 @@ radioInputs.forEach(function(input) {
 });
 
 // 使用querySelectorAll方法查找所有符合条件的input元素
-var checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
+const checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
 
 // 遍历找到的每个元素并将其从DOM树中删除
 checkboxInputs.forEach(function(input) {
     input.parentNode.removeChild(input);
 });
 
-var targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg');
+const targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg');
 
    // 遍历找到的每个元素并将其从DOM树中删除
    targetDivs.forEach(function(div) {
@@ -89,10 +89,58 @@ var targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-
    });
 
    // 使用querySelectorAll方法查找所有符合条件的input元素,填空题的匹配较简单可能会出现错误删除请自行辨别
-var targetInputs = document.querySelectorAll('input');
+const targetInputs = document.querySelectorAll('input');
 
 // 遍历找到的每个元素并清空其value属性值
 targetInputs.forEach(function(input) {
     input.value = "";
+});
+```
+
+### 进阶版-隐藏
+```ts
+const radioInputs = document.querySelectorAll('input[type="radio"]'); //单选
+const checkboxInputs = document.querySelectorAll('input[type="checkbox"]'); //多选
+const targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg'); //结果
+const targetInputs = document.querySelectorAll('input'); //填空
+
+radioInputs.forEach(function(input) {
+    input.style.opacity = 0;
+});
+
+checkboxInputs.forEach(function(input) {
+    input.style.opacity = 0;
+});
+
+targetDivs.forEach(function(div) {
+    div.style.opacity = 0;
+});
+
+targetInputs.forEach(function(input) {
+    input.style.color = "transparent";
+});
+```
+
+### 进阶版-显示
+```ts
+const radioInputs = document.querySelectorAll('input[type="radio"]'); //单选
+const checkboxInputs = document.querySelectorAll('input[type="checkbox"]'); //多选
+const targetDivs = document.querySelectorAll('div.space-y-4.text-sm.bg-bg-light.p-4.rounded-lg'); //结果
+const targetInputs = document.querySelectorAll('input'); //填空
+
+radioInputs.forEach(function(input) {
+    input.style.opacity = 100;
+});
+
+checkboxInputs.forEach(function(input) {
+    input.style.opacity = 100;
+});
+
+targetDivs.forEach(function(div) {
+    div.style.opacity = 100;
+});
+
+targetInputs.forEach(function(input) {
+    input.style.color = "black";
 });
 ```
