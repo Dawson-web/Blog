@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.betula.space//sitemap.xml
+Sitemap: https://www.betula.space/sitemap.xml
