@@ -39,6 +39,7 @@
   #icat-project .project .icat-project-box .icat-project-content {
     padding: 8px;
   }
+  
   #icat-project .project .icat-project-box .icat-project-content .icat-project-name {
     color: var(--icat-fontcolor);
     font-size: 18px;
