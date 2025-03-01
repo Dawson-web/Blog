@@ -24,7 +24,7 @@ menu:
   我的 || fas fa-user:
     装备: /equipment/ || fas fa-laptop
     项目: /project/ || fas fa-desktop
-  友链: /link/ || fas fa-link
+    友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)

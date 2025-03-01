@@ -1,8 +1,8 @@
 ---
 title: 插件！让你的Vscode强大起来 —— 人生总不能一直是一片荒野
-tags: 前端分享
-categories: 前端分享
-cover: /images/插件！让你的Vscode强大起来/cover.webp
+tags: 分享
+categories: 分享
+cover: /images/分享/插件！让你的Vscode强大起来/cover.webp
 date: '2024/8/05 15:22:25'
 abbrlink: 8fccf6ea
 ---

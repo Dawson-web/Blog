@@ -1,0 +1,114 @@
+#icat-study > h2 {
+    margin: 20px 7px 0;
+  }
+  #icat-study .study-desc {
+    margin: 0 7px;
+    color: var(--icat-secondtext);
+  }
+  #icat-study {
+    padding-bottom: 12px;
+  }
+  #icat-study .study {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 0;
+    gap: 16px;
+  }
+  /* 初始化 */
+  
+  #icat-study .study > .icat-study-box {
+    border: 1px solid var(--icat-secondbg);
+    background: var(--icat-card-bg);
+    width: calc(100% / 3 - 12px);
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  #icat-study .study .icat-study-box img {
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    animation:fadeIn 1s;
+    cursor:pointer;
+    transition:all .4s ease-in-out;
+  }
+  #icat-study .study .icat-study-box img:hover {
+      transform:scale(1.05);
+  }
+  #icat-study .study .icat-study-box .icat-study-content {
+    padding: 8px;
+  }
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-name {
+    color: var(--icat-fontcolor);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-custom {
+    font-size: 12px;
+    color: var(--icat-secondtext);
+    line-height: 1;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-opinion {
+    line-height: 20px;
+    color: var(--icat-secondtext);
+    height: 60px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+  }
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-box-more {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-box-more a {
+    font-size: 12px;
+    background: var(--blue);
+    color: white;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+  }
+  #icat-study .study .icat-study-box .icat-study-content .icat-study-box-more a:hover {
+    background: rgb(57, 57, 218);
+    box-shadow: 0 8px 16px -4px var(--icat-black-op);
+  }
+  /* 好物页基础样式 */
+  
+  @media screen and (max-width: 900px) {
+    #icat-study .study {
+      gap: 10px;
+    }
+    #icat-study .study > .icat-study-box {
+      width: calc(100% / 2 - 7px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #icat-study .study {
+      gap: 8px;
+    }
+    #icat-study .study > .icat-study-box {
+      width: 100%;
+    }
+    #icat-study .study .icat-study-box img {
+      height: 220px;
+    }
+  }
+  /* 响应式 */
+  
+  /* 我的好物样式 */
+  
+  
