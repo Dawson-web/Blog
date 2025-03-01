@@ -26,7 +26,7 @@ menu:
     项目: /project/ || fas fa-desktop
     友链: /link/ || fas fa-link
     关于: /about/ || fas fa-heart
-
+  学习: /study/ || fas fa-book
 # Code Blocks (代碼相關)
 # --------------------------------------
 
@@ -934,8 +934,12 @@ inject:
     - <link rel="stylesheet" href="/css/cardlistpost.css?1">
     - <link rel="stylesheet" href="/css/equipment.css">
     - <link rel="stylesheet" href="/css/project.css">
+    - <link rel="stylesheet" href="/css/study.css">
     - <link rel="stylesheet" href="/css/article_wave.css">
     - <link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/XMx86jzlQw0brz3/latest/iconfont.css">
+    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+		# - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/bb/showbb_in_index.css">
+		# - <script src="https://cdn.staticaly.com/gh/haonan15/CDN@main/source/waterfall.min.js"></script> # 瀑布流
 
   bottom:
     - <script src="/js/home_top.js?1"></script>

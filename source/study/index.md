@@ -1,5 +1,5 @@
 ---
-title: study
+title: 愿你这一路并不孤单
 date: 2025-03-01 23:38:25
 top_img: false
 aside: false

@@ -1,0 +1,55 @@
+- class_name: 编程语言
+  class_desc: 学习各种编程语言的精选资源
+  resource_list:
+    - name: JavaScript高级教程
+      image: https://cdn.bywind.xyz/img/banners/js.webp
+      type: 在线课程
+      difficulty: 中级
+      description: 深入学习JavaScript的原型、闭包、异步编程等高级概念
+      rating: 4.5
+      tags: ["JavaScript", "前端开发"]
+      official_link: https://javascript.info/
+      notes_link: https://your-blog.com/notes/js-advanced
+      
+    - name: TypeScript入门与实践
+      image: https://cdn.bywind.xyz/img/banners/js.webp
+      type: 电子书
+      difficulty: 入门到进阶
+      description: 全面学习TypeScript类型系统、接口、泛型等核心概念
+      rating: 5
+      tags: ["TypeScript", "JavaScript"]
+      official_link: https://www.typescriptlang.org/docs/
+      notes_link: https://your-blog.com/notes/typescript
+      
+- class_name: Web开发
+  class_desc: 前端和后端Web开发学习资源
+  resource_list:
+    - name: Vue3完全指南
+      image: https://cdn.bywind.xyz/img/banners/vue.webp
+      type: 视频教程
+      difficulty: 进阶
+      description: 从基础到高级的Vue3学习资源，包含Composition API和性能优化
+      rating: 4.8
+      tags: ["Vue", "前端框架"]
+      official_link: https://v3.cn.vuejs.org/
+      notes_link: https://your-blog.com/notes/vue3
+      
+    - name: React Hooks深度解析
+      image: https://cdn.bywind.xyz/img/banners/js.webp
+      type: 博客系列
+      difficulty: 高级
+      description: 深入理解React Hooks的工作原理和最佳实践
+      rating: 4.7
+      tags: ["React", "Hooks", "前端"]
+      official_link: https://reactjs.org/docs/hooks-intro.html
+      notes_link: https://your-blog.com/notes/react-hooks
+      
+    - name: TailwindCSS实战指南
+      image: https://cdn.bywind.xyz/img/banners/css.webp
+      type: 实战教程
+      difficulty: 中级
+      description: 使用TailwindCSS构建现代化响应式界面
+      rating: 4.6
+      tags: ["CSS", "TailwindCSS", "UI设计"]
+      official_link: https://tailwindcss.com/docs
+      notes_link: https://your-blog.com/notes/tailwind 

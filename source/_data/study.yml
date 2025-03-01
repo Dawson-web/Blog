@@ -1,8 +1,263 @@
-- class_name: 前端项目
-  class_desc: 一些奇奇怪怪的小玩意
-  project_list:
-    - name: ISES
-      custom: 即刻短文
-      opinion: 基于React+TailwindCSS+TypeScript+Matine UI构建的即刻短文
-      details_flink: https://dawsons.love
-      image: /images/前端项目/ises.webp
+- class_name: 入门
+  class_desc: 适合新手入门的官方教程
+  study_list:
+    - name: MDN Web Docs
+      custom: Mozilla开发者网络
+      opinion: 最全面的Web开发文档，涵盖HTML、CSS和JavaScript等前端技术的权威参考
+      details_flink: https://developer.mozilla.org/zh-CN/
+      image: https://developer.mozilla.org/favicon.ico
+
+    - name: W3Schools
+      custom: Web技术学习平台
+      opinion: 提供简单易懂的编程教程，包含大量示例和在线编辑器，非常适合初学者
+      details_flink: https://www.w3schools.com/
+      image: https://www.w3schools.com/favicon.ico
+
+    - name: CSS-Tricks
+      custom: CSS技巧与教程
+      opinion: 专注于CSS的高质量教程和技巧，包含大量实用案例和前沿技术
+      details_flink: https://css-tricks.com/
+      image: https://css-tricks.com/favicon.ico
+
+    - name: JavaScript.info
+      custom: 现代JavaScript教程
+      opinion: 从基础到高级的JavaScript完整指南，内容详实且与时俱进
+      details_flink: https://zh.javascript.info/
+      image: https://zh.javascript.info/img/sitetoolbar__logo_small_en.svg
+
+- class_name: CSS工具
+  class_desc: CSS预处理器和实用工具库
+  study_list:
+    - name: TailwindCSS
+      custom: 实用优先的CSS框架
+      opinion: 一种功能类优先的CSS框架，无需离开HTML即可快速构建现代网站，通过组合原子类实现设计
+      details_flink: https://tailwindcss.com/
+      image: https://tailwindcss.com/favicon.ico
+      
+    - name: Sass
+      custom: 成熟的CSS预处理器
+      opinion: 最流行的CSS预处理器，提供变量、嵌套规则、混合、函数等功能，大幅提高CSS的可维护性
+      details_flink: https://sass-lang.com/
+      image: https://sass-lang.com/assets/img/logos/logo.svg
+      
+    - name: Less
+      custom: 轻量级CSS预处理器
+      opinion: 向后兼容CSS的语言扩展，增加变量、Mixin、函数等特性，比Sass语法更接近原生CSS
+      details_flink: https://lesscss.org/
+      image: https://lesscss.org/public/img/less_logo.png
+
+
+- class_name: TS
+  class_desc: 适合TS初学者
+  study_list:
+    - name: TypeScript 教程
+      custom: TS新手入门级别教程
+      opinion: 阮一峰编写的 TypeScript 开源教程，介绍基本概念和用法，面向初学者。
+      details_flink: https://wangdoc.com/typescript/
+      image: https://cdn.beekka.com/blogimg/asset/202308/bg2023080705.webp
+
+    - name: TypeScript Documentation
+      custom: TS官方教程
+      opinion: 更加权威官方的TS教程
+      details_flink: https://www.typescriptlang.org/docs/
+      image: https://www.typescriptlang.org/favicon.ico
+
+
+- class_name: React
+  class_desc: React 生态系统学习资源
+  study_list:
+    - name: React 教程
+      custom: React的官方教程
+      opinion: React官方教程，可以快速上手
+      details_flink: https://zh-hans.react.dev/learn
+      image: https://zh-hans.react.dev/favicon.ico
+      
+    - name: TanStack Query
+      custom: 数据获取与状态管理库
+      opinion: 前身为React Query，用于在React应用中进行API调用、缓存、同步和更新服务器状态的强大工具
+      details_flink: https://tanstack.com/query/latest
+      image: https://tanstack.com/favicon.ico
+      
+    - name: React Router
+      custom: React路由管理
+      opinion: 最流行的React路由库，用于构建单页应用的导航系统，支持多种路由模式和嵌套路由
+      details_flink: https://reactrouter.com/en/main
+      image: https://reactrouter.com/favicon.ico
+      
+    - name: Redux Toolkit
+      custom: 状态管理工具
+      opinion: Redux的官方推荐工具集，简化了Redux的配置和使用流程，包含了多种实用功能
+      details_flink: https://redux-toolkit.js.org/
+      image: https://redux-toolkit.js.org/img/redux.svg
+      
+    - name: Zustand
+      custom: 轻量级状态管理
+      opinion: 极简的React状态管理库，API简洁直观，体积小巧，无样板代码，是Redux的轻量级替代方案
+      details_flink: https://zustand-demo.pmnd.rs/
+      image: https://zustand-demo.pmnd.rs/favicon.ico
+      
+    - name: Jotai
+      custom: 原子化状态管理
+      opinion: 受Recoil启发的轻量级状态管理库，基于原子概念，可组合且支持异步，适合精细粒度的状态管理
+      details_flink: https://jotai.org/
+      image: https://cdn.candycode.com/jotai/jotai-mascot.png
+
+
+- class_name: Vue
+  class_desc: Vue生态系统学习资源
+  study_list:
+    - name: Vue.js 官方文档
+      custom: Vue框架官方指南
+      opinion: 最权威的Vue学习资源，包含完整的API参考、教程和示例，支持Vue 2和Vue 3
+      details_flink: https://cn.vuejs.org/
+      image: https://sponsors.vuejs.org/images/vuemastery.avif
+      
+    - name: Vue Router
+      custom: Vue官方路由
+      opinion: Vue.js官方的路由管理器，深度集成Vue核心，轻松构建单页应用
+      details_flink: https://router.vuejs.org/zh/
+      image: https://router.vuejs.org/logo.svg
+      
+    - name: Pinia
+      custom: Vue官方推荐状态管理
+      opinion: Vue生态中轻量级的状态管理库，Vue 3团队推荐使用，支持TypeScript，是Vuex的替代品
+      details_flink: https://pinia.vuejs.org/zh/
+      image: https://pinia.vuejs.org/logo.svg
+
+    - name: Vuex
+      custom: 传统状态管理
+      opinion: Vue传统的状态管理模式库，适用于Vue 2项目，在Vue 3中推荐使用Pinia替代
+      details_flink: https://vuex.vuejs.org/zh/
+      image: https://router.vuejs.org/logo.svg
+      
+
+- class_name: 组件库
+  class_desc: 前端框架的UI组件库资源
+  study_list:
+    # Vue组件库
+    - name: Element Plus
+      custom: Vue 3企业级组件库
+      opinion: 基于Vue 3的桌面端组件库，提供丰富的UI组件和功能，适合企业级应用开发
+      details_flink: https://element-plus.org/zh-CN/
+      image: https://element-plus.org/images/buildadmin.png
+      
+    - name: Vuetify
+      custom: Material设计的Vue组件库
+      opinion: 基于Material Design设计规范的Vue UI库，拥有精美的界面和丰富的功能组件
+      details_flink: https://vuetifyjs.com/zh-Hans/
+      image: https://vuetifyjs.com/favicon.ico
+      
+    - name: Quasar
+      custom: 跨平台Vue框架
+      opinion: 基于Vue的高性能组件框架，一套代码可构建网站、移动应用和桌面应用
+      details_flink: https://quasar.dev/
+      image: https://cdn.quasar.dev/logo-v2/svg/logo-dark.svg
+      
+    - name: PrimeVue
+      custom: 功能丰富的Vue组件套件
+      opinion: 提供70多个UI组件的Vue库，支持多种主题和丰富的数据展示组件
+      details_flink: https://primevue.org/
+      image: https://primevue.org/favicon.ico
+      
+    - name: Naive UI
+      custom: 纯TypeScript的Vue 3组件库
+      opinion: 完全使用TypeScript编写的Vue 3组件库，拥有主题定制、国际化等特性
+      details_flink: https://www.naiveui.com/zh-CN/
+      image: https://www.naiveui.com/assets/naivelogo-BdDVTUmz.svg
+      
+    # React组件库
+    - name: Ant Design
+      custom: 企业级React UI框架
+      opinion: 阿里巴巴开发的企业级UI设计语言和React组件库，是最流行的React UI框架之一
+      details_flink: https://ant.design/index-cn
+      image: https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg
+      
+    - name: Mantine
+      custom: 现代React组件库
+      opinion: 全功能的React组件库，支持暗黑模式、RTL和自动颜色主题
+      details_flink: https://mantine.dev/
+      image: https://mantine.dev/_next/static/media/banner.38a39e81.webp
+      
+    - name: NextUI
+      custom: 美观的React UI库
+      opinion: 基于React的现代化UI库，提供优雅的设计和流畅的动画效果
+      details_flink: https://nextui.org/
+      image: https://nextui.org/favicon.ico
+      
+    - name: Material UI (MUI)
+      custom: Material Design的React实现
+      opinion: 最流行的Material Design组件库，提供丰富的预制组件和定制能力
+      details_flink: https://mui.com/
+      image: https://mui.com/favicon.ico
+      
+    - name: Chakra UI
+      custom: 简洁现代的React组件库
+      opinion: 简单、模块化且可访问的组件库，专注于开发者体验和易用性
+      details_flink: https://chakra-ui.com/
+      image: https://chakra-ui.com/favicon.ico
+
+- class_name: AI工具
+  class_desc: 实用的AI编程助手和生成工具
+  study_list:
+    - name: 腾讯元宝
+      custom: Tencent大模型助手
+      opinion: 腾讯自研的大语言模型应用，支持多轮对话、内容创作和知识问答，提供免费体验额度
+      details_flink: https://hunyuan.tencent.com/
+      image: https://cdn-portal.hunyuan.tencent.com/public/074e38834bdc4e9cf017.png
+      
+    - name: DeepSeek
+      custom: 开源AI模型平台
+      opinion: 专注于代码和科学研究的AI模型，提供完全开源的DeepSeek Coder系列模型，在代码生成和理解方面表现出色
+      details_flink: https://deepseek.com/
+      image: https://deepseek.com/favicon.ico
+      
+    - name: Cursor
+      custom: AI辅助编程IDE
+      opinion: 基于VSCode构建的AI编程工具，集成代码生成、代码解释和问答功能，通过AI提高开发效率
+      details_flink: https://cursor.sh/
+      image: https://cursor.sh/favicon.ico
+      
+    - name: ChatGPT
+      custom: OpenAI聊天机器人
+      opinion: 最知名的AI助手，支持强大的对话能力和创意内容生成，提供API接口便于开发者集成
+      details_flink: https://chat.openai.com/
+      image: https://chat.openai.com/favicon.ico
+
+    - name: V0
+      custom: 代码生成工具
+      opinion: 一个基于AI的代码生成工具，支持多种编程语言，可以生成代码片段、完整项目和文档
+      details_flink: https://v0.dev/
+      image: https://v0.dev/chat-static/sign-in-visual-dark.svg
+
+- class_name: 开发者社区
+  class_desc: 程序员交流和学习平台
+  study_list:
+    - name: GitHub
+      custom: 代码托管与开源协作
+      opinion: 全球最大的代码托管平台，拥有海量开源项目，是学习编程和参与开源协作的重要场所
+      details_flink: https://github.com/
+      image: https://github.com/favicon.ico
+      
+    - name: V2EX
+      custom: 程序员社区
+      opinion: 国内知名的程序员社区，关注程序员、设计师、创意工作者的生活和职业，讨论氛围良好
+      details_flink: https://www.v2ex.com/
+      image: https://www.v2ex.com/favicon.ico
+      
+    - name: 力扣（LeetCode）
+      custom: 算法刷题平台
+      opinion: 最受欢迎的编程能力训练平台，提供大量算法题目和编程挑战，是求职面试的必备工具
+      details_flink: https://leetcode.cn/
+      image: https://leetcode.cn/favicon.ico
+      
+    - name: 牛客网
+      custom: 面试刷题与求职
+      opinion: 国内知名的IT求职学习平台，提供编程题库、面试经验和职业发展资源，适合校招和社招
+      details_flink: https://www.nowcoder.com/
+      image: https://www.nowcoder.com/favicon.ico
+      
+    - name: 掘金
+      custom: 技术分享社区
+      opinion: 一个帮助开发者成长的社区，提供优质的技术文章和分享，覆盖前端、后端、移动端等多个领域
+      details_flink: https://juejin.cn/
+      image: https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/6c61ae65d1c41ae8221a670fa32d05aa.svg

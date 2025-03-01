@@ -14,6 +14,28 @@ index 234a0af..9293622 100644
        +articleSort(page.posts)
        include includes/pagination.pug
 \ No newline at end of file
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/bbTimeList.pug b/node_modules/hexo-theme-butterfly/layout/includes/bbTimeList.pug
+new file mode 100644
+index 0000000..ad19858
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/bbTimeList.pug
+@@ -0,0 +1,16 @@
++#bbTimeList.bbTimeList.container
++    i.bber-logo.iconfont.icon-bblogo(onclick=`pjax.loadUrl("/essay/")`,title="即刻短文",style="font-size: 2rem;")
++    #bbtalk.swiper-container.swiper-no-swiping(tabindex="-1")
++        #bber-talk.swiper-wrapper(onclick=`pjax.loadUrl("/essay/")`)
++            each i in site.data.essay
++                each item, index in i.essay_list
++                    if index < 10
++                        - var contentText = item.content
++                        if item.image
++                            - contentText= item.content + ' [图片]'
++                        else if item.music
++                            - contentText= item.content + ' [音乐]'
++                        .li-style.swiper-slide= contentText
++
++    i.bber-gotobb.fas.fa-arrow-circle-right(onclick=`pjax.loadUrl("/essay/")`,title="查看全文")
++script(src='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',data-pjax='')
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/categoryBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/categoryBar.pug
 new file mode 100644
 index 0000000..dfe3526
@@ -122,6 +144,28 @@ index f6376ca..1b4db11 100644
 +      #toggle-menu
 +        a.site-page(href="javascript:void(0);" title="搜索本站文章")
 +          i.iconfont.icat-bars
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/header/post-info.pug b/node_modules/hexo-theme-butterfly/layout/includes/header/post-info.pug
+index 491dd6e..20b0d52 100644
+--- a/node_modules/hexo-theme-butterfly/layout/includes/header/post-info.pug
++++ b/node_modules/hexo-theme-butterfly/layout/includes/header/post-info.pug
+@@ -25,7 +25,7 @@
+             i.fa-fw.post-meta-icon(class=date_icon)
+             span.post-meta-label= date_title
+             time(datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
+-      if (theme.post_meta.post.categories && page.categories.data.length > 0)
++      if (theme.post_meta.post.categories && page.categories && page.categories.data && page.categories.data.length > 0)
+         span.post-meta-categories
+           if (theme.post_meta.post.date_type)
+             span.post-meta-separator |
+@@ -33,7 +33,7 @@
+           each item, index in page.categories.data
+             i.fas.fa-inbox.fa-fw.post-meta-icon
+             a(href=url_for(item.path)).post-meta-categories #[=item.name]
+-            if (index < page.categories.data.length - 1)
++            if (page.categories && page.categories.data && index < page.categories.data.length - 1)
+               i.fas.fa-angle-right.post-meta-separator
+ 
+     .meta-secondline
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
 new file mode 100644
 index 0000000..810ed67
@@ -396,6 +440,59 @@ index 0000000..b17c253
 +    - result += listResult
 +  != result + page.content
 +
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/essay.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/essay.pug
+new file mode 100644
+index 0000000..e1868bc
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/page/essay.pug
+@@ -0,0 +1,47 @@
++.author-content.author-content-item.essayPage.single.essayVideo
++    .card-content
++        .author-content-item-tips 即刻短文
++        span.author-content-item-title 分享生活的小确幸
++        .content-bottom
++            .tips 使用 即刻短文静态部署版 构建
++        .banner-button-group
++            a.banner-button(onclick='pjax.loadUrl("/about/")', data-pjax-state)
++                i.fas.fa-circle-chevron-right
++                span.banner-button-text 部署项目
++#bber
++    section.timeline.page-1
++        ul#waterfall.list.show
++            each i in site.data.essay
++                each item, index in i.essay_list
++                    if index < 30
++                        li.item
++                            .bber-content
++                                p.datacont= item.content
++                                    if item.image
++                                        .bber-content-img
++                                            a.fancybox(target='_blank', rel='noopener', href=item.image, data-fancybox='gallery', data-caption)
++                                                img.bber-content-image-self(src=item.image)
++                            if item.music
++                                .bber-music
++                                    meting-js(server=item.music.server, type='song', id=item.music.id, mutex='true', preload='none', theme='var(--bywind-main)', data-lrctype='0')
++                            hr
++                            .bber-bottom
++                                .bber-info
++                                    .bber-info-time
++                                        i.fa-solid.fa-calendar-days
++                                        - var datedata = new Date(item.date).toISOString()
++
++                                        time.datatime(datetime= item.date)= datedata
++                                    if item.link
++                                        a.bber-content-link(href=item.link, target="_blank", rel="external nofollow", title="跳转到短文指引的链接")
++                                            i.fas.fa-link
++                                            | 链接
++                                    - let location = item.location ? item.location : 山西
++                                    .bber-info-address
++                                        i.hnfont.icon-location-fill
++                                        span=location
++                                a.bber-reply(onclick=`rm.rightMenuCommentText('${item.content}')`)
++                                    i.fa-solid.fa-message
++
++#bber-tips(style='color: var(--bywind-secondtext);')
++    | - 只展示最近30条短文 -
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/project.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/project.pug
 new file mode 100644
 index 0000000..0cc8294
@@ -438,19 +535,19 @@ index 0000000..0cc8294
 +
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
 new file mode 100644
-index 0000000..0cc8294
+index 0000000..b261402
 --- /dev/null
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
 @@ -0,0 +1,34 @@
-+#icat-project
++#icat-study
 +  - var result = ''
-+  each i in site.data.project
++  each i in site.data.study
 +    - let className = i.class_name ? markdown(`## ${i.class_name}`) : ""
-+    - let classDesc = i.class_desc ? `<div class="project-desc">${i.class_desc}</div>` : ""
++    - let classDesc = i.class_desc ? `<div class="study-desc">${i.class_desc}</div>` : ""
 +
 +    - let listResult = `${className}${classDesc} `
 +    - let listContent = ''
-+    each j in i.project_list
++    each j in i.study_list
 +      - let details = ''
 +      -
 +        if (j.details_link) {
@@ -459,20 +556,20 @@ index 0000000..0cc8294
 +          details = `<a href="${j.details_flink}" title="跳转到 ${j.name} 的产品详情" target="_blank" rel="external nofollow"  >官网</a>`
 +        }
 +        listContent += `
-+          <div class="icat-project-box">
++          <div class="icat-study-box">
 +            <img src="${j.image}">
-+            <div class="icat-project-content">
-+              <div class="icat-project-name">${j.name}</div>
-+              <div class="icat-project-custom">${j.custom}</div>
-+              <div class="icat-project-opinion">${j.opinion}</div>
-+              <div class="icat-project-box-more">
++            <div class="icat-study-content">
++              <div class="icat-study-name">${j.name}</div>
++              <div class="icat-study-custom">${j.custom}</div>
++              <div class="icat-study-opinion">${j.opinion}</div>
++              <div class="icat-study-box-more">
 +                ${details}
 +
 +              </div>
 +            </div>
 +          </div>`
 +      -
-+    - listResult += `<div class="project">${listContent}</div>`
++    - listResult += `<div class="study">${listContent}</div>`
 +    - result += listResult
 +  != result + page.content
 +
