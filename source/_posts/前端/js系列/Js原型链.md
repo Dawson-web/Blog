@@ -125,7 +125,7 @@ console.log(doSomeInstancing);
 
 可以看到，原型对象有一个自有属性constructor，这个属性指向该函数，如下图关系展示
 
-![Js原型链](/images/Js原型链/1.webp)
+![Js原型链](/images/前端/js系列/Js原型链/1.webp)
 
 ##  _proto_
 
@@ -137,7 +137,7 @@ console.log(doSomeInstancing);
 
 上述概念可以先看一张图来方便理解
 
-![Js原型链](/images/Js原型链/2.webp)
+![Js原型链](/images/前端/js系列/Js原型链/2.webp)
 
 此处的Person为构造函数，Person.prototype为原型对象，person为实例对象
 

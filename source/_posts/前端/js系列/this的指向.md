@@ -36,7 +36,7 @@ date: 2024-08-15 09:00:00
   console.log(this) // > [object Window]
   ```
 
-  ![this的指向](/images/this的指向/1.webp)
+  ![this的指向](/images/前端/js系列/this的指向/1.webp)
 
 - 隐式绑定
 
@@ -53,7 +53,7 @@ date: 2024-08-15 09:00:00
   obj.test() // > Hello!
   ```
 
-  ![this的指向](/images/this的指向/2.webp)
+  ![this的指向](/images/前端/js系列/this的指向/2.webp)
 
 - new绑定
 
@@ -68,7 +68,7 @@ date: 2024-08-15 09:00:00
   console.log(obj.x) // > Hello!
   ```
 
-  ![this的指向](/images/this的指向/3.webp)
+  ![this的指向](/images/前端/js系列/this的指向/3.webp)
 
 
 - 显示绑定
@@ -94,7 +94,7 @@ date: 2024-08-15 09:00:00
   // Expected output: 42
   
   ```
-  ![this的指向](/images/this的指向/4.webp)
+  ![this的指向](/images/前端/js系列/this的指向/4.webp)
 
 
 - 箭头函数
@@ -135,7 +135,7 @@ date: 2024-08-15 09:00:00
 
   ```
 
-  ![this的指向](/images/this的指向/5.webp)
+  ![this的指向](/images/前端/js系列/this的指向/5.webp)
 
 ## 绑定优先级:
 
