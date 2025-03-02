@@ -418,10 +418,10 @@ index 0000000..0cc8294
 +
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
 new file mode 100644
-index 0000000..b261402
+index 0000000..d9a86f2
 --- /dev/null
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
-@@ -0,0 +1,34 @@
+@@ -0,0 +1,36 @@
 +#icat-study
 +  - var result = ''
 +  each i in site.data.study
@@ -440,7 +440,9 @@ index 0000000..b261402
 +        }
 +        listContent += `
 +          <div class="icat-study-box">
-+            <img src="${j.image}">
++            <div class="icat-study-img">
++              <img src="${j.image}">
++            </div>
 +            <div class="icat-study-content">
 +              <div class="icat-study-name">${j.name}</div>
 +              <div class="icat-study-custom">${j.custom}</div>
