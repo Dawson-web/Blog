@@ -104,7 +104,7 @@ index f6376ca..167a2cd 100644
 +          i.iconfont.icat-bars
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
 new file mode 100644
-index 0000000..4382227
+index 0000000..61cdd40
 --- /dev/null
 +++ b/node_modules/hexo-theme-butterfly/layout/includes/hometop.pug
 @@ -0,0 +1,70 @@
@@ -145,16 +145,16 @@ index 0000000..4382227
 +                            i.fas.fa-arrow-right.banner-righticon
 +                    .categoryGroup
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-blue)')
-+                            a.categoryButton.CB1.bikan(href='/categories/前端分享/')
++                            a.categoryButton.CB1.bikan(href='/categories/项目/')
 +                                span.categoryButtonText 必看精选
 +                                i.fas.fa-dove
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-red)')
-+                            a.categoryButton.remen(href='/categories/日常生活/')
-+                                span.categoryButtonText 热门文章
++                            a.categoryButton.remen(href='/equipment/')
++                                span.categoryButtonText 生产装备
 +                                i.fas.fa-burn
 +                        .categoryItem(style='box-shadow:var(--bywind-shadow-green)')
-+                            a.categoryButton.shiyong(href='/categories/Js系列/')
-+                                span.categoryButtonText 实用教程
++                            a.categoryButton.shiyong(href='/study/')
++                                span.categoryButtonText 学习资源
 +                                i.fas.fa-book
 +                .topGroup
 +                    if site.data.slider
@@ -170,9 +170,9 @@ index 0000000..4382227
 +                        .todayCard-info
 +                            .todayCard-tips 最佳记忆
 +                            .todayCard-title
-+                                | 山河远阔，人间烟火
++                                | 我于夜幕中寻找
 +                                br
-+                                | 无一是你，无一不是你
++                                | 做一场深蓝色的梦，却无一人是你
 +                        .todayCard-cover
 +                        .banner-button-group
 +                            a.banner-button(onclick='window.event.cancelBubble=!0,bywind.hideTodayCard()')

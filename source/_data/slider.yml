@@ -1,15 +1,24 @@
-- cover: /images/吉尔伽美什的宝藏/cover.webp
-  link: /posts/a983f53f.html
-  title: 吉尔伽美什的宝藏
+- cover: /images/面试/喜马拉雅一面/cover.webp
+  link: /posts/362658c.html
+  title: 喜马拉雅(OC)
 
-- cover: /images/前端面试系列/cover.webp
-  link: /posts/3e09bb5c.html
-  title: 前端面试系列
+- cover: /images/项目/思辨怎么才算一种好的代码组织方式/cover.webp
+  link: /posts/bc38422b.html
+  title: 思辨怎么才算一种好的代码组织方式
 
-- cover: /images/插件！让你的Vscode强大起来/cover.webp
+- cover: /images/前端/设计系列/PTA复习有答案干扰？不存在的!/cover.webp
+  link: /posts/5f2b22ca.html
+  title: PTA复习有答案干扰？不存在的!
+
+- cover: /images/分享/插件！让你的Vscode强大起来/cover.webp
   link: posts/8fccf6ea.html
   title: 插件！让你的Vscode强大起来
 
-- cover: /images/Rdtf基于Next.js构建的快速开发模板/cover.webp
-  link: posts/c175e719.html
-  title: Rdtf基于Next.js构建的快速开发模板
+- cover: /images/前端/设计系列/一种无状态验证码/cover.webp
+  link: /posts/a3c61405.html
+  title: 一种无状态验证码
+
+- cover: /images/分享/吉尔伽美什的宝藏/cover.webp
+  link: /posts/a983f53f.html
+  title: 吉尔伽美什的宝藏
+
