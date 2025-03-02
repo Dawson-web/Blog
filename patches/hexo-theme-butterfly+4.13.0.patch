@@ -416,6 +416,46 @@ index 0000000..0cc8294
 +    - result += listResult
 +  != result + page.content
 +
+diff --git a/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
+new file mode 100644
+index 0000000..b261402
+--- /dev/null
++++ b/node_modules/hexo-theme-butterfly/layout/includes/page/study.pug
+@@ -0,0 +1,34 @@
++#icat-study
++  - var result = ''
++  each i in site.data.study
++    - let className = i.class_name ? markdown(`## ${i.class_name}`) : ""
++    - let classDesc = i.class_desc ? `<div class="study-desc">${i.class_desc}</div>` : ""
++
++    - let listResult = `${className}${classDesc} `
++    - let listContent = ''
++    each j in i.study_list
++      - let details = ''
++      -
++        if (j.details_link) {
++          details = `<a href="${j.details_link}" title="本站关于 ${j.name} 的产品体验报告" target="_blank" rel="external nofollow">官网</a>`
++        } else if (j.details_flink) {
++          details = `<a href="${j.details_flink}" title="跳转到 ${j.name} 的产品详情" target="_blank" rel="external nofollow"  >官网</a>`
++        }
++        listContent += `
++          <div class="icat-study-box">
++            <img src="${j.image}">
++            <div class="icat-study-content">
++              <div class="icat-study-name">${j.name}</div>
++              <div class="icat-study-custom">${j.custom}</div>
++              <div class="icat-study-opinion">${j.opinion}</div>
++              <div class="icat-study-box-more">
++                ${details}
++
++              </div>
++            </div>
++          </div>`
++      -
++    - listResult += `<div class="study">${listContent}</div>`
++    - result += listResult
++  != result + page.content
++
 diff --git a/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug b/node_modules/hexo-theme-butterfly/layout/includes/tagBar.pug
 new file mode 100644
 index 0000000..e6a0eac
@@ -428,10 +468,10 @@ index 0000000..e6a0eac
 +  a.category-bar-more(href="/tags/") 更多
 \ No newline at end of file
 diff --git a/node_modules/hexo-theme-butterfly/layout/page.pug b/node_modules/hexo-theme-butterfly/layout/page.pug
-index 6c810ef..f379a83 100644
+index 6c810ef..a536217 100644
 --- a/node_modules/hexo-theme-butterfly/layout/page.pug
 +++ b/node_modules/hexo-theme-butterfly/layout/page.pug
-@@ -12,6 +12,10 @@ block content
+@@ -12,6 +12,12 @@ block content
          include includes/page/flink.pug
        when 'categories'
          include includes/page/categories.pug
@@ -439,6 +479,8 @@ index 6c810ef..f379a83 100644
 +        include includes/page/equipment.pug
 +      when 'project'
 +        include includes/page/project.pug
++      when 'study'
++        include includes/page/study.pug
        default
          include includes/page/default-page.pug
  
