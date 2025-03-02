@@ -886,7 +886,7 @@ index 97cb0ff..e70355e 100644
          transition: all .3s ease-in-out
  
 diff --git a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl b/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
-index 9f63e15..cc28457 100644
+index 9f63e15..a71b580 100644
 --- a/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
 +++ b/node_modules/hexo-theme-butterfly/source/css/_layout/loading.styl
 @@ -1,95 +1,50 @@
@@ -1028,7 +1028,7 @@ index 9f63e15..cc28457 100644
 +    }
 +
 +.loading-img {
-+  background: url(https://www.betula.space/images/avatar.png) no-repeat center center;
++  background: url(https://www.irisation.tech/images/avatar.webp) no-repeat center center;
 +  background-size: cover;
 +}
 \ No newline at end of file
