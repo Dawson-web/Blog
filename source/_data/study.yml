@@ -34,8 +34,7 @@
       custom: Git教程
       opinion: Git教程
       details_flink: https://www.runoob.com/git/git-tutorial.html
-      image: 
-https://www.runoob.com/wp-content/uploads/2015/02/f7246b600c338744a9591cd7530fd9f9d62aa0f8.png
+      image: https://www.runoob.com/wp-content/uploads/2015/02/f7246b600c338744a9591cd7530fd9f9d62aa0f8.png
 
 - class_name: CSS工具
   class_desc: CSS预处理器和实用工具库
