@@ -30,12 +30,12 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: pale night # darker / pale night / light / ocean / false
+highlight_theme: light # darker / pale night / light / ocean / false
 highlight_height_limit: false # unit: px
 code_word_wrap: false
 
 # highlight toolbar
-highlight_theme_macStyle: false # use mac style
+highlight_theme_macStyle: true # use mac style
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -54,7 +54,7 @@ favicon: /images/favicon.webp
 
 # Avatar (頭像)
 avatar:
-  img: /images/avatar.webp
+  img: /images/avatar.gif
   effect: false
 
 # Disable all banner image
@@ -740,8 +740,8 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
-  code-font-size:
+  global-font-size: 14px
+  code-font-size: 14px
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
   code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
@@ -935,6 +935,7 @@ inject:
     - <link rel="stylesheet" href="/css/equipment.css">
     - <link rel="stylesheet" href="/css/project.css">
     - <link rel="stylesheet" href="/css/study.css">
+    - <link rel="stylesheet" href="/css/font.css">
     - <link rel="stylesheet" href="/css/article_wave.css">
     - <link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/XMx86jzlQw0brz3/latest/iconfont.css">
 
